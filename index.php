@@ -1,96 +1,478 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
-        table {
-            border-collapse: collapse;
-        }
+<meta charset="UTF-8">
+<title>College Portal | Student Management System</title>
 
-        BODY {
-            background-color: #666633;
-        }
+<style>
+/* ================= RESET ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
 
-        a {
-            color: white;
-            text-decoration: none;
-        }
+body{
+    background:#f4f6fb;
+}
 
-        #menu td {
-            width: 13%;
-            text-align: center;
-            background-color: #666699;
-            color: white;
-            font-size: 20px;
-        }
+/* ================= NAVBAR ================= */
+.navbar{
+    background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    padding:15px 50px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
 
-        #book td {
-            width: 20%;
-        }
-    </style>
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:52px;
+    height:52px;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
+.logo span{
+    font-size:14px;
+    opacity:0.8;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    padding:8px 18px;
+    border-radius:20px;
+}
+
+.nav-links a.active,
+.nav-links a:hover{
+    background:white;
+    color:#203a43;
+}
+
+
+/* ================= HERO SLIDER (FIXED) ================= */
+.hero{
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+/* Slider track */
+.hero-slider{
+    display: flex;
+    height: 100%;
+    width: 300vw; /* 3 slides */
+    animation: heroSlide 10s infinite ease-in-out;
+}
+
+/* Each slide */
+.hero-slide{
+    width: 100vw;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+/* Images */
+.hero-slide.one{ background-image: url("images/college.jpg"); }
+.hero-slide.two{ background-image: url("images/library.png"); }
+.hero-slide.three{ background-image: url("images/student.png"); }
+
+/* Overlay */
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(25,35,85,0.75);
+    z-index:2;
+}
+
+/* Content */
+.hero-content{
+    position:absolute;
+    inset:0;
+    z-index:3;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+/* Buttons */
+.hero-buttons a{
+    padding:14px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:18px;
+    margin:0 10px;
+    display:inline-block;
+}
+
+.btn-primary{
+    background:white;
+    color:#1f3c88;
+    font-weight:600;
+}
+
+.btn-secondary{
+    background:#1f3c88;
+    color:white;
+    border:2px solid white;
+}
+
+/* Animation */
+@keyframes heroSlide{
+    0%   { transform: translateX(0); }
+    30%  { transform: translateX(0); }
+
+    33%  { transform: translateX(-100vw); }
+    63%  { transform: translateX(-100vw); }
+
+    66%  { transform: translateX(-200vw); }
+    100% { transform: translateX(-200vw); }
+}
+
+
+/* ================= INFO STRIP ================= */
+.info-strip{
+    background:#009688;
+    color:white;
+    text-align:center;
+    padding:18px;
+    font-size:18px;
+}
+
+/* ================= STATS ================= */
+.stats{
+    display:flex;
+    justify-content:space-around;
+    background:white;
+    padding:60px 40px;
+}
+
+.stat-box{
+    text-align:center;
+}
+
+.stat-box h2{
+    font-size:36px;
+    color:#1f3c88;
+}
+
+.stat-box p{
+    color:#555;
+}
+
+/* ================= FACULTY ================= */
+.faculty{
+    background:#f9fbff;
+    padding:60px 40px;
+}
+
+.faculty h2{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.faculty p{
+    text-align:center;
+    color:#666;
+    margin-bottom:40px;
+}
+
+.faculty-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+}
+
+.faculty-card{
+    min-width: 220px;   /* 👈 THIS CONTROLS WIDTH */
+    max-width: 220px;   /* 👈 KEEP CONSISTENT */
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.faculty-card:hover{
+    transform:translateY(-8px);
+}
+
+.faculty-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.faculty-card .info{
+    padding:15px;
+    text-align:center;
+}
+
+.faculty-card h4{
+    margin-bottom:5px;
+}
+
+.faculty-card span{
+    color:#1f3c88;
+    font-size:14px;
+}
+
+
+
+
+
+/* ===== CONTINUOUS FACULTY SLIDER ===== */
+.faculty-slider-wrapper{
+    overflow:hidden;
+    width:100%;
+}
+
+.faculty-slider{
+    display:flex;
+    gap:25px;
+    width:max-content;
+    animation: facultyScroll 40s linear infinite;
+}
+
+/* pause on hover */
+.faculty-slider-wrapper:hover .faculty-slider{
+    animation-play-state: paused;
+}
+
+/* continuous left scroll */
+@keyframes facultyScroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+
+/* ================= FOOTER ================= */
+.footer{
+    background:#0f2027;
+    color:white;
+    padding:40px 50px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.footer h3{
+    margin-bottom:12px;
+}
+
+.footer a{
+    color:#ddd;
+    text-decoration:none;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:30px;
+    border-top:1px solid #333;
+    padding-top:15px;
+    font-size:14px;
+}
+</style>
 </head>
 
 <body>
-    <!--Header table-->
-    <table border="1" width="80%" align="center" height="20%">
-        <tr>
-            <td width="10%" bgcolor="#00CCCC">
-                <img src="images/logo.jpg" width="150px" height="150px" />
-            </td>
-            <td bgcolor="#000000"
-                style="font-size:60px;color:red;font-variant:small-caps;font-family:arial;text-shadow:4px 4px 4px white"
-                align="center">
-                Student Management System
-            </td>
-        </tr>
-    </table>
 
-    <!--Banner image table-->
-    <table border="1" width="80%" align="center" height="40%">
-        <tr>
-            <td>
-                <img src="image/banner2.jpg" width="100%" height="100%" />
-            </td>
-        </tr>
-    </table>
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <img src="images/logo.png">
+        <div>
+            <h2>Tamralipta Institute of Management & Technology</h2>
+            <span>Affiliated to MAKAUT &nbsp•&nbsp Approved by AICTE &nbsp•&nbsp Recognised by UGC</span>
+        </div>
+    </div>
+    <div class="nav-links">
+        <a href="index.php" class="active">Home</a>
+        <a href="reg.php">Registration</a>
+        <a href="view.php">Student Records</a>
+        <a href="viewdel.php">Edit</a>
+    </div>
+</div>
 
-    <!--Menubar table-->
-    <table border="1" id="menu" width="80%" align="center" height="8%">
-        <tr>
-            <td><a href="index.php">HOME</a></td>
-            <td><a href="reg.php">REGISTRATION</a></td>
-            <td><a href="view.php">STUDENT RECORD</a></td>
-            <td><a href="viewdel.php">EDIT</a></td>
-        </tr>
-    </table>
+<!-- HERO -->
+<!-- HERO SLIDER -->
+<div class="hero">
 
-    <!--Heading table-->
-    <table border="1" width="80%" align="center" height="8%">
-        <tr bgcolor="#006666">
-            <td style="font-size:20px;text-align:center;font-weight:bold;color:white;">
-                <marquee>
-                    Expert Faculties
-                </marquee>
-            </td>
-        </tr>
-    </table>
+    <div class="hero-slider">
+        <div class="hero-slide one"></div>
+        <div class="hero-slide two"></div>
+        <div class="hero-slide three"></div>
+    </div>
 
-    <!--Faculty table-->
-    <table border="1" id="book" width="80%" align="center" height="40%">
-        <tr>
-            <td><img src="image/n1.jpg" width="235px" height="300px" /></td>
-            <td><img src="image/n2.jpg" width="235px" height="300px" /></td>
-            <td><img src="image/n3.jpg" width="235px" height="300px" /></td>
-            <td><img src="image/n6.jpg" width="235px" height="300px" /></td>
-            <td><img src="image/n5.jpg" width="235px" height="300px" /></td>
-        </tr>
-    </table>
+    <div class="hero-overlay"></div>
 
-    <!--ad_view_container table-->
-    <table border="1" width="80%" align="center" height="8%">
-        <tr style="background-color:#333399;color:white;font-size:20px">
-            <td align="center">
-                Made by Milan Jana
-            </td>
-        </tr>
-    </table>
+    <div class="hero-content">
+        <h1>Student Management System</h1>
+        <p>Empowering Education Through Technology</p>
+
+        <div class="hero-buttons">
+            <a href="reg.php" class="btn-primary">Register Now</a>
+            <a href="view.php" class="btn-secondary">View Records</a>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- INFO -->
+<div class="info-strip">
+    Expert Faculties • Smart Learning • Career Focused Education
+</div>
+
+<!-- STATS -->
+<div class="stats">
+    <div class="stat-box"><h2>5000+</h2><p>Active Students</p></div>
+    <div class="stat-box"><h2>200+</h2><p>Expert Faculty</p></div>
+    <div class="stat-box"><h2>50+</h2><p>Programs Offered</p></div>
+</div>
+
+<!-- FACULTY -->
+<!-- FACULTY SECTION -->
+<div class="faculty">
+    <h2>Our Expert Faculty</h2>
+    <p>Learn from industry leaders and experienced educators</p>
+
+    <div class="faculty-slider-wrapper">
+        <div class="faculty-slider">
+
+            <!-- ===== ORIGINAL LIST ===== -->
+            <div class="faculty-card">
+                <img src="images/anathbandhu.jpeg">
+                <div class="info"><h4>Dr. Anathbandhu Patra</h4><span>Ph.D (IIT Kharagpur), MBA , DHRM, MA</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/manas.jpeg">
+                <div class="info"><h4>Manas Kumar Khatua</h4><span>M.Sc (Math)</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/dhruba.jpeg">
+                <div class="info"><h4>Dhrubajoti Mondal</h4><span>M.Com, MBA (Finance)</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/sandip.jpeg">
+                <div class="info"><h4>Sandip Sekhar Santra</h4><span>Ph.D, MBA</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/srijib.jpeg">
+                <div class="info"><h4>Srijib Samanta</h4><span>Ph.D, MCA</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/prasad.jpeg">
+                <div class="info"><h4>Prasad Manna</h4><span>M.Sc (Eco), MBA</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/santanu.jpeg">
+                <div class="info"><h4>Santanu Kumar Jana</h4><span>Ph.D, MCA</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/suman.jpeg">
+                <div class="info"><h4>Suman Das</h4><span>MCA</span></div>
+            </div>
+
+            <!-- ===== DUPLICATE LIST (FOR SMOOTH LOOP) ===== -->
+            <div class="faculty-card">
+                <img src="images/anathbandhu.jpeg">
+                <div class="info"><h4>Dr. Anathbandhu Patra</h4><span>Ph.D (IIT Kharagpur), MBA , DHRM, MA</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/manas.jpeg">
+                <div class="info"><h4>Manas Kumar Khatua</h4><span>M.Sc (Math)</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/dhruba.jpeg">
+                <div class="info"><h4>Dhrubajoti Mondal</h4><span>M.Com, MBA (Finance)</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/sandip.jpeg">
+                <div class="info"><h4>Sandip Sekhar Santra</h4><span>Ph.D, MBA</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/srijib.jpeg">
+                <div class="info"><h4>Srijib Samanta</h4><span>Ph.D, MCA</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/prasad.jpeg">
+                <div class="info"><h4>Prasad Manna</h4><span>M.Sc (Eco), MBA</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/santanu.jpeg">
+                <div class="info"><h4>Santanu Kumar Jana</h4><span>Ph.D, MCA</span></div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="images/suman.jpeg">
+                <div class="info"><h4>Suman Das</h4><span>MCA</span></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- FOOTER -->
+<div class="footer">
+    <div class="footer-content">
+        <div><h3>TIMT</h3><p>Streamlining education with technology.</p></div>
+        <div><h3>Quick Links</h3><p><a href="index.php">Home</a></p><p><a href="reg.php">Registration</a></p></div>
+        <div><h3>Contact</h3><p>Email: timt.institute@gmail.com</p><p>Phone: +91 8697511132</p></div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 College Portal | Developed by Milan Jana 😊
+    </div>
+</div>
+
 </body>
 </html>

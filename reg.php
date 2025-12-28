@@ -13,103 +13,345 @@ if (isset($_POST['btn'])) {
     $f  = $_POST['txtf'];
     $p  = $_POST['txtp'];
 
-    // calculate remaining fees
     $r = $f - $p;
 
-    // correct SQL with column names
-    $qry = "INSERT INTO reg 
+    $qry = "INSERT INTO reg
             (name, surname, email, contact, college, qualification, course, fees, paid, remaining)
-            VALUES 
+            VALUES
             ('$n','$sn','$e','$c','$cn','$q','$co','$f','$p','$r')";
 
-    // ✅ mysqli_query (NOT mysql_query)
-    $sql = mysqli_query($con, $qry);
-
-    if ($sql) {
-        echo "<script>alert('Data Saved Successfully');</script>";
+    if (mysqli_query($con, $qry)) {
+        echo "<script>alert('Student Registered Successfully');</script>";
     } else {
-        echo "<script>alert('Data Not Saved');</script>";
+        echo "<script>alert('Registration Failed');</script>";
     }
 }
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<title>Registration | Student Management System</title>
+
 <style>
-table { border-collapse: collapse; }
-body { background-color:#666633; }
-a { color:white; text-decoration:none; }
-#menu td {
-    width:13%;
-    text-align:center;
-    background-color:#666699;
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
+
+body{
+    background:#f4f6fb;
+}
+
+/* ===== NAVBAR (FROM INDEX.PHP) ===== */
+.navbar{
+    background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);
     color:white;
-    font-size:20px;
+    padding:15px 50px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:52px;
+    height:52px;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
+.logo span{
+    font-size:14px;
+    opacity:0.8;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    padding:8px 18px;
+    border-radius:20px;
+}
+
+.nav-links a.active,
+.nav-links a:hover{
+    background:white;
+    color:#203a43;
+}
+
+/* ===== FORM CARD ===== */
+.form-wrapper{
+    max-width:900px;
+    margin:50px auto;
+    background:white;
+    padding:35px;
+    border-radius:16px;
+    box-shadow:0 10px 35px rgba(0,0,0,0.15);
+}
+
+.form-wrapper h2{
+    margin-bottom:6px;
+}
+
+.form-wrapper p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.section{
+    margin-bottom:30px;
+}
+
+.section h3{
+    margin-bottom:15px;
+}
+
+/* GRID */
+.grid-2{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+}
+
+.field label{
+    font-size:14px;
+    font-weight:600;
+    min-height:18px;     /* 🔥 keeps all labels aligned */
+}
+
+.field input,
+.field select{
+    margin-top:8px;
+    padding:13px 14px;
+    border:none;
+    border-radius:10px;
+    background:#f2f2f2;
+    font-size:14px;
+    height:46px;         /* 🔥 same height for all inputs */
+}
+
+
+.field input,
+.field select{
+    margin-top:6px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#f2f2f2;
+    font-size:14px;
+}
+
+.field input[readonly]{
+    background:#e6e6e6;
+}
+
+/* BUTTONS */
+.buttons{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.buttons button{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.btn-submit{
+    background:linear-gradient(90deg,#000,#1f3c88);
+    color:white;
+}
+
+.btn-clear{
+    background:white;
+    border:1px solid #ccc;
+}
+
+/* ===== FOOTER (FROM INDEX.PHP) ===== */
+.footer{
+    background:#0f2027;
+    color:white;
+    padding:40px 50px;
+    margin-top:60px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.footer h3{
+    margin-bottom:12px;
+}
+
+.footer a{
+    color:#ddd;
+    text-decoration:none;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:30px;
+    border-top:1px solid #333;
+    padding-top:15px;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .grid-2,.grid-3{
+        grid-template-columns:1fr;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<table border="1" width="80%" align="center">
-<tr>
-<td width="10%" bgcolor="#00CCCC">
-<img src="image/logo3.jpg" width="150" height="150">
-</td>
-<td bgcolor="#000000"
-style="font-size:60px;color:red;font-variant:small-caps;
-font-family:arial;text-shadow:4px 4px 4px white"
-align="center">
-Student Management System
-</td>
-</tr>
-</table>
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <img src="images/logo.png">
+        <div>
+            <h2>Tamralipta Institute of Management & Technology</h2>
+            <span>Affiliated to MAKAUT &nbsp•&nbsp Approved by AICTE &nbsp•&nbsp Recognised by UGC</span>
+        </div>
+    </div>
+    <div class="nav-links">
+        <a href="index.php">Home</a>
+        <a href="reg.php" class="active">Registration</a>
+        <a href="view.php">Student Records</a>
+        <a href="viewdel.php">Edit</a>
+    </div>
+</div>
 
-<table border="1" id="menu" width="80%" align="center">
-<tr>
-<td><a href="index.php">HOME</a></td>
-<td><a href="reg.php">REGISTRATION</a></td>
-<td><a href="view.php">STUDENT RECORD</a></td>
-<td><a href="viewdel.php">EDIT</a></td>
-</tr>
-</table>
+<!-- FORM -->
+<div class="form-wrapper">
+    <h2>Student Registration Form</h2>
+    <p>Please fill in all the required information to register a new student</p>
 
-<table border="1" bgcolor="white" width="80%" align="center">
-<tr>
-<td align="center">
+    <form method="post"
+    oninput="txtr.value=parseInt(txtf.value||0)-parseInt(txtp.value||0)">
 
-<fieldset style="width:400px;font-size:25px">
-<legend>Registration Form</legend>
+        <!-- PERSONAL -->
+        <div class="section">
+            <h3>Personal Information</h3>
+            <div class="grid-2">
+                <div class="field">
+                    <label>Name *</label>
+                    <input type="text" name="txtn" required placeholder="Enter first name">
+                </div>
+                <div class="field">
+                    <label>Surname *</label>
+                    <input type="text" name="txtsn" required placeholder="Enter surname">
+                </div>
+                <div class="field">
+                    <label>Email *</label>
+                    <input type="email" name="txte" required placeholder="student@example.com">
+                </div>
+                <div class="field">
+                    <label>Contact</label>
+                    <input type="text" name="txtc" placeholder="Enter phone number">
+                </div>
+            </div>
+        </div>
 
-<form method="post"
-oninput="txtr.value=parseInt(txtf.value||0)-parseInt(txtp.value||0)">
+        <!-- ACADEMIC -->
+        <div class="section">
+            <h3>Academic Information</h3>
+            <div class="grid-2">
+                <div class="field">
+                    <label>College</label>
+                    <input type="text" name="txtcn" placeholder="Enter college name">
+                </div>
+                <div class="field">
+                    <label>Qualification</label>
+                    <select name="txtq">
+                        <option value="">Select qualification</option>
+                        <option>High School</option>
+                        <option>Bachelor Degree</option>
+                        <option>Master Degree</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Course *</label>
+                    <select name="txtco" required>
+                        <option value="">Select course</option>
+                        <option>Computer Science</option>
+                        <option>Engineering</option>
+                        <option>Business Administration</option>
+                        <option>Arts</option>
+                    </select>
+                </div>
+            </div>
+        </div>
 
-<table cellpadding="8" style="font-size:18px;color:navy">
+        <!-- FEES -->
+        <div class="section">
+            <h3>Fee Information</h3>
+            <div class="grid-3">
+                <div class="field">
+                    <label>Fees</label>
+                    <input type="number" name="txtf" placeholder="Total fees">
+                </div>
+                <div class="field">
+                    <label>Paid</label>
+                    <input type="number" name="txtp" placeholder="Amount paid">
+                </div>
+                <div class="field">
+                    <label>Remaining</label>
+                    <input type="number" name="txtr" readonly value="0">
+                </div>
+            </div>
+        </div>
 
-<tr><td>Name</td><td><input type="text" name="txtn" required></td></tr>
-<tr><td>Surname</td><td><input type="text" name="txtsn" required></td></tr>
-<tr><td>Email</td><td><input type="email" name="txte" required></td></tr>
-<tr><td>Contact</td><td><input type="text" name="txtc" required></td></tr>
-<tr><td>College</td><td><input type="text" name="txtcn" required></td></tr>
-<tr><td>Qualification</td><td><input type="text" name="txtq" required></td></tr>
-<tr><td>Course</td><td><input type="text" name="txtco" required></td></tr>
-<tr><td>Fees</td><td><input type="number" name="txtf" required></td></tr>
-<tr><td>Paid</td><td><input type="number" name="txtp" required></td></tr>
-<tr><td>Remaining</td><td><input type="number" name="txtr" readonly></td></tr>
+        <div class="buttons">
+            <button type="submit" name="btn" class="btn-submit">Register Student</button>
+            <button type="reset" class="btn-clear">Clear Form</button>
+        </div>
 
-<tr>
-<td></td>
-<td><input type="submit" name="btn" value="Save"></td>
-</tr>
+    </form>
+</div>
 
-</table>
-</form>
-</fieldset>
-
-</td>
-</tr>
-</table>
+<!-- FOOTER -->
+<div class="footer">
+    <div class="footer-content">
+        <div><h3>TIMT</h3><p>Streamlining education with technology.</p></div>
+        <div><h3>Quick Links</h3><p><a href="index.php">Home</a></p><p><a href="reg.php">Registration</a></p></div>
+        <div><h3>Contact</h3><p>Email: timt.institute@gmail.com</p><p>Phone: +91 8697511132</p></div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 College Portal | Developed by Milan Jana 😊
+    </div>
+</div>
 
 </body>
 </html>

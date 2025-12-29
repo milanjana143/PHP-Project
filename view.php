@@ -155,6 +155,7 @@ tr:hover{
 }
 
 /* ================= FOOTER ================= */
+/* ===== FOOTER ===== */
 .footer{
     background:#0f2027;
     color:white;
@@ -184,6 +185,7 @@ tr:hover{
     font-size:14px;
 }
 
+
 /* RESPONSIVE */
 @media(max-width:768px){
     .navbar{
@@ -200,6 +202,23 @@ tr:hover{
         font-size:13px;
     }
 }
+
+
+
+
+html, body{
+    height:100%;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+.page-content{
+    flex:1;
+}
+
 </style>
 </head>
 
@@ -221,56 +240,61 @@ tr:hover{
     </div>
 </div>
 
-<div class="card">
-    <h2>Student Records</h2>
-    <p>Viewing all registered entries (Total: <strong><?php echo $total; ?></strong>)</p>
+<div class="page-content">
+    <div class="card">
+        <h2>Student Records</h2>
+        <p>Viewing all registered entries (Total: <strong><?php echo $total; ?></strong>)</p>
 
-    <input type="text" class="search-box" id="myInput" onkeyup="searchTable()"
-           placeholder="🔍 Search by name, email, course, or college...">
+        <input type="text" class="search-box" id="myInput" onkeyup="searchTable()"
+            placeholder="🔍 Search by name, email, course, or college...">
 
-    <?php if($total == 0){ ?>
-        <div class="empty">
-            <p>No students registered yet.</p>
-            <p><a href="reg.php" style="color:#203a43;">Click here to register a new student.</a></p>
+        <?php if($total == 0){ ?>
+            <div class="empty">
+                <p>No students registered yet.</p>
+                <p><a href="reg.php" style="color:#203a43;">Click here to register a new student.</a></p>
+            </div>
+        <?php } else { ?>
+
+        <div class="table-wrapper">
+            <table id="recordsTable">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>College</th>
+                        <th>Qualification</th>
+                        <th>Course</th>
+                        <th>Fees</th>
+                        <th>Paid</th>
+                        <th>Remaining</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php while($row = mysqli_fetch_assoc($sql)){ ?>
+                    <tr>
+                        <td><?php echo $row['name']; ?></td>
+                        <td><?php echo $row['surname']; ?></td>
+                        <td><?php echo $row['email']; ?></td>
+                        <td><?php echo $row['contact']; ?></td>
+                        <td><?php echo $row['college']; ?></td>
+                        <td><?php echo $row['qualification']; ?></td>
+                        <td><?php echo $row['course']; ?></td>
+                        <td><?php echo $row['fees']; ?></td>
+                        <td><?php echo $row['paid']; ?></td>
+                        <td><?php echo $row['remaining']; ?></td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
         </div>
-    <?php } else { ?>
-
-    <div class="table-wrapper">
-        <table id="recordsTable">
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                    <th>Contact</th>
-                    <th>College</th>
-                    <th>Qualification</th>
-                    <th>Course</th>
-                    <th>Fees</th>
-                    <th>Paid</th>
-                    <th>Remaining</th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php while($row = mysqli_fetch_assoc($sql)){ ?>
-                <tr>
-                    <td><?php echo $row['name']; ?></td>
-                    <td><?php echo $row['surname']; ?></td>
-                    <td><?php echo $row['email']; ?></td>
-                    <td><?php echo $row['contact']; ?></td>
-                    <td><?php echo $row['college']; ?></td>
-                    <td><?php echo $row['qualification']; ?></td>
-                    <td><?php echo $row['course']; ?></td>
-                    <td><?php echo $row['fees']; ?></td>
-                    <td><?php echo $row['paid']; ?></td>
-                    <td><?php echo $row['remaining']; ?></td>
-                </tr>
-            <?php } ?>
-            </tbody>
-        </table>
+        <?php } ?>
     </div>
-    <?php } ?>
 </div>
+
+
+
 
 <div class="footer">
     <div class="footer-content">

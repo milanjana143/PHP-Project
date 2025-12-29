@@ -241,6 +241,24 @@ th{
         font-size:13px;
     }
 }
+
+
+html, body{
+    height:100%;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+.page-content{
+    flex:1;
+}
+
+
+
+
 </style>
 </head>
 
@@ -262,67 +280,70 @@ th{
     </div>
 </div>
 
-<div class="card">
-    <h2>Edit / Delete Student Records</h2>
-    <p>Manage registered students (Total: <strong><?php echo $total; ?></strong>)</p>
+<div class="page-content">
+    <div class="card">
+        <h2>Edit / Delete Student Records</h2>
+        <p>Manage registered students (Total: <strong><?php echo $total; ?></strong>)</p>
 
-    <?php if($total == 0){ ?>
-        <div class="empty">
-            <p>No students registered yet.</p>
+        <?php if($total == 0){ ?>
+            <div class="empty">
+                <p>No students registered yet.</p>
+            </div>
+        <?php } else { ?>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>College</th>
+                        <th>Qualification</th>
+                        <th>Course</th>
+                        <th>Fees</th>
+                        <th>Paid</th>
+                        <th>Remaining</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php while($row = mysqli_fetch_assoc($sql)){ ?>
+                    <tr>
+                        <td><?php echo $row['name']; ?></td>
+                        <td><?php echo $row['surname']; ?></td>
+                        <td><?php echo $row['email']; ?></td>
+                        <td><?php echo $row['contact']; ?></td>
+                        <td><?php echo $row['college']; ?></td>
+                        <td><?php echo $row['qualification']; ?></td>
+                        <td><?php echo $row['course']; ?></td>
+                        <td><?php echo $row['fees']; ?></td>
+                        <td><?php echo $row['paid']; ?></td>
+                        <td><?php echo $row['remaining']; ?></td>
+                        <td>
+                            <div style="display:flex; justify-content:center; gap:8px;">
+                                <a class="action-btn edit-btn"
+                                href="update.php?id=<?php echo $row['id']; ?>">
+                                Edit
+                                </a>
+
+                                <a class="action-btn delete-btn"
+                                href="delete.php?id=<?php echo $row['id']; ?>"
+                                onclick="return confirm('Are you sure you want to delete this record?')">
+                                Delete
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
         </div>
-    <?php } else { ?>
-
-    <div class="table-wrapper">
-        <table>
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                    <th>Contact</th>
-                    <th>College</th>
-                    <th>Qualification</th>
-                    <th>Course</th>
-                    <th>Fees</th>
-                    <th>Paid</th>
-                    <th>Remaining</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php while($row = mysqli_fetch_assoc($sql)){ ?>
-                <tr>
-                    <td><?php echo $row['name']; ?></td>
-                    <td><?php echo $row['surname']; ?></td>
-                    <td><?php echo $row['email']; ?></td>
-                    <td><?php echo $row['contact']; ?></td>
-                    <td><?php echo $row['college']; ?></td>
-                    <td><?php echo $row['qualification']; ?></td>
-                    <td><?php echo $row['course']; ?></td>
-                    <td><?php echo $row['fees']; ?></td>
-                    <td><?php echo $row['paid']; ?></td>
-                    <td><?php echo $row['remaining']; ?></td>
-                    <td>
-                        <div style="display:flex; justify-content:center; gap:8px;">
-                            <a class="action-btn edit-btn"
-                            href="update.php?id=<?php echo $row['id']; ?>">
-                            Edit
-                            </a>
-
-                            <a class="action-btn delete-btn"
-                            href="delete.php?id=<?php echo $row['id']; ?>"
-                            onclick="return confirm('Are you sure you want to delete this record?')">
-                            Delete
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-            <?php } ?>
-            </tbody>
-        </table>
+        <?php } ?>
     </div>
-    <?php } ?>
 </div>
+
 
 <div class="footer">
     <div class="footer-content">

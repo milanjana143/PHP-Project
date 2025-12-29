@@ -1,16 +1,25 @@
 <?php
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-$con = mysqli_connect("localhost","root","", "", 3306);
-echo "Connected<br>";
+// connect without DB
+$con = mysqli_connect("localhost", "root", "");
 
-mysqli_query($con,"CREATE DATABASE training");
-echo "Database training CREATED<br>";
+if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
-mysqli_select_db($con,"training");
+// create database
+mysqli_query($con, "CREATE DATABASE IF NOT EXISTS training");
 
-mysqli_query($con,"
-CREATE TABLE reg (
+// select database
+mysqli_select_db($con, "training");
+
+// drop old table
+mysqli_query($con, "DROP TABLE IF EXISTS reg");
+
+// create correct table
+$sql = "CREATE TABLE reg (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
     surname VARCHAR(50),
@@ -22,6 +31,11 @@ CREATE TABLE reg (
     fees INT,
     paid INT,
     remaining INT
-)");
-echo "Table reg CREATED";
+)";
+
+if (mysqli_query($con, $sql)) {
+    echo "Database & correct table created successfully";
+} else {
+    echo "Error creating table: " . mysqli_error($con);
+}
 ?>

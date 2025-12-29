@@ -4,6 +4,12 @@ include("connect.php");
 // fetch records
 $qry = "SELECT * FROM reg";
 $sql = mysqli_query($con, $qry);
+
+// error check
+if (!$sql) {
+    die("Query Failed: " . mysqli_error($con));
+}
+
 $total = mysqli_num_rows($sql);
 ?>
 
@@ -35,13 +41,12 @@ body::before{
     left: 0;
     width: 100%;
     height: 100%;
-
     background: url("images/college.jpg") no-repeat center center / cover;
-    opacity: 0.4;              /* 👈 control image visibility */
+    opacity: 0.4;
     z-index: -1;
 }
 
-/* ================= NAVBAR (MATCHES INDEX) ================= */
+/* ================= NAVBAR ================= */
 .navbar{
     background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);
     color:white;
@@ -77,7 +82,7 @@ body::before{
     margin-left:20px;
     padding:8px 18px;
     border-radius:20px;
-    transition: 0.3s;
+    transition:0.3s;
 }
 
 .nav-links a.active,
@@ -86,7 +91,7 @@ body::before{
     color:#203a43;
 }
 
-/* ================= CARD & TABLE CONTENT ================= */
+/* ================= CARD & TABLE ================= */
 .card{
     max-width:1250px;
     margin:50px auto;
@@ -98,7 +103,7 @@ body::before{
 
 .card h2{
     margin-bottom:6px;
-    color: #333;
+    color:#333;
 }
 
 .card p{
@@ -114,7 +119,7 @@ body::before{
     background:#f9f9f9;
     font-size:15px;
     margin-bottom:25px;
-    outline: none;
+    outline:none;
 }
 
 .table-wrapper{
@@ -136,11 +141,11 @@ th, td{
 th{
     background:#f8f9fa;
     font-weight:600;
-    color: #444;
+    color:#444;
 }
 
-tr:hover {
-    background: #fdfdfd;
+tr:hover{
+    background:#fdfdfd;
 }
 
 .empty{
@@ -149,7 +154,7 @@ tr:hover {
     color:#555;
 }
 
-/* ================= FOOTER (MATCHES INDEX) ================= */
+/* ================= FOOTER ================= */
 .footer{
     background:#0f2027;
     color:white;
@@ -163,7 +168,7 @@ tr:hover {
 }
 
 .footer h3{
-    margin: bottom 6px;
+    margin-bottom:6px;
 }
 
 .footer a{
@@ -181,18 +186,18 @@ tr:hover {
 
 /* RESPONSIVE */
 @media(max-width:768px){
-    .navbar {
-        padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
+    .navbar{
+        padding:15px 20px;
+        flex-direction:column;
+        gap:15px;
     }
-    .nav-links {
-        margin-left: 0;
+    .nav-links{
+        margin-left:0;
     }
-    .nav-links a {
-        margin: 0 5px;
-        padding: 6px 12px;
-        font-size: 13px;
+    .nav-links a{
+        margin:0 5px;
+        padding:6px 12px;
+        font-size:13px;
     }
 }
 </style>
@@ -202,10 +207,10 @@ tr:hover {
 
 <div class="navbar">
     <div class="logo">
-        <img src="images/logo.png" alt="Logo">
+        <img src="images/logo.png">
         <div>
             <h2>Tamralipta Institute of Management & Technology</h2>
-            <span>Affiliated to MAKAUT &nbsp•&nbsp Approved by AICTE &nbsp•&nbsp Recognised by UGC</span>
+            <span>Affiliated to MAKAUT • Approved by AICTE • Recognised by UGC</span>
         </div>
     </div>
     <div class="nav-links">
@@ -226,7 +231,7 @@ tr:hover {
     <?php if($total == 0){ ?>
         <div class="empty">
             <p>No students registered yet.</p>
-            <p><a href="reg.php" style="color: #203a43;">Click here to register a new student.</a></p>
+            <p><a href="reg.php" style="color:#203a43;">Click here to register a new student.</a></p>
         </div>
     <?php } else { ?>
 
@@ -247,7 +252,7 @@ tr:hover {
                 </tr>
             </thead>
             <tbody>
-                <?php while($row = mysqli_fetch_assoc($sql)){ ?>
+            <?php while($row = mysqli_fetch_assoc($sql)){ ?>
                 <tr>
                     <td><?php echo $row['name']; ?></td>
                     <td><?php echo $row['surname']; ?></td>
@@ -260,79 +265,51 @@ tr:hover {
                     <td><?php echo $row['paid']; ?></td>
                     <td><?php echo $row['remaining']; ?></td>
                 </tr>
-                <?php } ?>
+            <?php } ?>
             </tbody>
         </table>
     </div>
     <?php } ?>
 </div>
 
-
-
 <div class="footer">
     <div class="footer-content">
         <div><h3>TIMT</h3><p>Where education meets innovation.</p></div>
-        <div><h3>Quick Links</h3>
-        
-        <div style="margin-top:15px; display:flex; gap:14px;">
 
-  <a href="https://www.facebook.com/timttmluk">
-    <img src="images/fb.png"
-         style="width:28px; height:28px; border-radius:50%;">
-  </a>
+        <div>
+            <h3>Quick Links</h3>
+            <div style="margin-top:15px; display:flex; gap:14px;">
+                <a href="https://www.facebook.com/timttmluk"><img src="images/fb.png" style="width:28px;height:28px;border-radius:50%;"></a>
+                <a href="https://www.instagram.com/tamralipta_inst_of_man_nd_tech"><img src="images/insta.png" style="width:28px;height:28px;border-radius:50%;"></a>
+                <a href="https://www.youtube.com/@tamraliptainstituteofmanag3871"><img src="images/yt.png" style="width:28px;height:28px;border-radius:50%;"></a>
+            </div>
+        </div>
 
-  <a href="https://www.instagram.com/tamralipta_inst_of_man_nd_tech?igsh=OG05aGIybDR5MjZp">
-    <img src="images/insta.png"
-         style="width:28px; height:28px; border-radius:50%;">
-  </a>
-
-  <a href="https://www.youtube.com/@tamraliptainstituteofmanag3871">
-    <img src="images/yt.png"
-         style="width:28px; height:28px; border-radius:50%;">
-  </a>
-
-</div>
-
-</div>
         <div><h3>Contact</h3><p>Email: timt.institute@gmail.com</p><p>Phone: +91 8697511132</p></div>
     </div>
-   <div class="footer-bottom">
-    © 2025 College Portal | Developed by 
-    <a href="https://www.linkedin.com/in/milanjana143/"
-       style="
-       color:#ffffff;
-       background:#1f3c88;
-       padding:6px 12px;
-       border-radius:20px;
-       text-decoration:none;
-       font-weight:600;
-       margin-left:6px;
-       display:inline-block;
-       ">
-       Milan Jana
-    </a>
+
+    <div class="footer-bottom">
+        © 2025 College Portal | Developed by 
+        <a href="https://www.linkedin.com/in/milanjana143/"
+           style="color:#fff;background:#1f3c88;padding:6px 12px;border-radius:20px;text-decoration:none;font-weight:600;">
+           Milan Jana
+        </a>
+    </div>
 </div>
-
-</div>
-
-
-
 
 <script>
 function searchTable() {
-    var input, filter, table, tr, td, i, j, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("recordsTable");
-    tr = table.getElementsByTagName("tr");
+    var input = document.getElementById("myInput");
+    var filter = input.value.toUpperCase();
+    var table = document.getElementById("recordsTable");
+    var tr = table.getElementsByTagName("tr");
 
-    for (i = 1; i < tr.length; i++) {
+    for (var i = 1; i < tr.length; i++) {
         tr[i].style.display = "none";
-        td = tr[i].getElementsByTagName("td");
-        for (j = 0; j < td.length; j++) {
+        var td = tr[i].getElementsByTagName("td");
+        for (var j = 0; j < td.length; j++) {
             if (td[j]) {
-                txtValue = td[j].textContent || td[j].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                if (td[j].innerText.toUpperCase().indexOf(filter) > -1) {
                     tr[i].style.display = "";
                     break;
                 }

@@ -4,6 +4,12 @@ include("connect.php");
 // fetch records
 $qry = "SELECT * FROM reg";
 $sql = mysqli_query($con, $qry);
+
+// error check
+if (!$sql) {
+    die("Query Failed: " . mysqli_error($con));
+}
+
 $total = mysqli_num_rows($sql);
 ?>
 
@@ -35,13 +41,12 @@ body::before{
     left: 0;
     width: 100%;
     height: 100%;
-
     background: url("images/college.jpg") no-repeat center center / cover;
-    opacity: 0.4;              /* 👈 control image visibility */
+    opacity: 0.4;
     z-index: -1;
 }
 
-/* ================= NAVBAR (MATCHES INDEX) ================= */
+/* ================= NAVBAR ================= */
 .navbar{
     background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);
     color:white;
@@ -77,7 +82,7 @@ body::before{
     margin-left:20px;
     padding:8px 18px;
     border-radius:20px;
-    transition: 0.3s;
+    transition:0.3s;
 }
 
 .nav-links a.active,
@@ -98,7 +103,7 @@ body::before{
 
 .card h2{
     margin-bottom:6px;
-    color: #333;
+    color:#333;
 }
 
 .card p{
@@ -106,7 +111,7 @@ body::before{
     margin-bottom:25px;
 }
 
-/* ================= TABLE STYLE ================= */
+/* ================= TABLE ================= */
 .table-wrapper{
     overflow-x:auto;
 }
@@ -126,7 +131,7 @@ th, td{
 th{
     background:#f8f9fa;
     font-weight:600;
-    color: #444;
+    color:#444;
 }
 
 /* ACTION BUTTONS */
@@ -136,24 +141,28 @@ th{
     font-size:13px;
     text-decoration:none;
     font-weight:600;
-    display: inline-block;
-    transition: 0.2s;
+    display:inline-block;
+    transition:0.2s;
 }
 
 .edit-btn{
     background:#1f3c88;
     color:white;
-    margin-bottom: 5px;
+    margin-bottom:5px;
 }
 
-.edit-btn:hover{ background: #162d66; }
+.edit-btn:hover{
+    background:#162d66;
+}
 
 .delete-btn{
     background:#d32f2f;
     color:white;
 }
 
-.delete-btn:hover{ background: #b71c1c; }
+.delete-btn:hover{
+    background:#b71c1c;
+}
 
 .empty{
     text-align:center;
@@ -161,7 +170,7 @@ th{
     color:#555;
 }
 
-/* ================= FOOTER (MATCHES INDEX) ================= */
+/* ================= FOOTER ================= */
 .footer{
     background:#0f2027;
     color:white;
@@ -175,7 +184,7 @@ th{
 }
 
 .footer h3{
-    margin: bottom 6px;
+    margin-bottom:6px;
 }
 
 .footer a{
@@ -193,15 +202,15 @@ th{
 
 /* RESPONSIVE */
 @media(max-width:768px){
-    .navbar {
-        padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
+    .navbar{
+        padding:15px 20px;
+        flex-direction:column;
+        gap:15px;
     }
-    .nav-links a {
-        margin: 0 5px;
-        padding: 6px 12px;
-        font-size: 13px;
+    .nav-links a{
+        margin:0 5px;
+        padding:6px 12px;
+        font-size:13px;
     }
 }
 </style>
@@ -211,10 +220,10 @@ th{
 
 <div class="navbar">
     <div class="logo">
-        <img src="images/logo.png" alt="Logo">
+        <img src="images/logo.png">
         <div>
             <h2>Tamralipta Institute of Management & Technology</h2>
-            <span>Affiliated to MAKAUT &nbsp•&nbsp Approved by AICTE &nbsp•&nbsp Recognised by UGC</span>
+            <span>Affiliated to MAKAUT • Approved by AICTE • Recognised by UGC</span>
         </div>
     </div>
     <div class="nav-links">
@@ -253,7 +262,7 @@ th{
                 </tr>
             </thead>
             <tbody>
-                <?php while($row = mysqli_fetch_assoc($sql)){ ?>
+            <?php while($row = mysqli_fetch_assoc($sql)){ ?>
                 <tr>
                     <td><?php echo $row['name']; ?></td>
                     <td><?php echo $row['surname']; ?></td>
@@ -270,7 +279,7 @@ th{
                            href="update.php?id=<?php echo $row['id']; ?>">
                            Edit
                         </a>
-
+                        <br>
                         <a class="action-btn delete-btn"
                            href="delete.php?id=<?php echo $row['id']; ?>"
                            onclick="return confirm('Are you sure you want to delete this record?')">
@@ -278,7 +287,7 @@ th{
                         </a>
                     </td>
                 </tr>
-                <?php } ?>
+            <?php } ?>
             </tbody>
         </table>
     </div>
@@ -288,47 +297,26 @@ th{
 <div class="footer">
     <div class="footer-content">
         <div><h3>TIMT</h3><p>Where education meets innovation.</p></div>
-        <div><h3>Quick Links</h3>
-        
-        <div style="margin-top:15px; display:flex; gap:14px;">
 
-  <a href="https://www.facebook.com/timttmluk">
-    <img src="images/fb.png"
-         style="width:28px; height:28px; border-radius:50%;">
-  </a>
+        <div>
+            <h3>Quick Links</h3>
+            <div style="margin-top:15px; display:flex; gap:14px;">
+                <a href="https://www.facebook.com/timttmluk"><img src="images/fb.png" style="width:28px;height:28px;border-radius:50%;"></a>
+                <a href="https://www.instagram.com/tamralipta_inst_of_man_nd_tech"><img src="images/insta.png" style="width:28px;height:28px;border-radius:50%;"></a>
+                <a href="https://www.youtube.com/@tamraliptainstituteofmanag3871"><img src="images/yt.png" style="width:28px;height:28px;border-radius:50%;"></a>
+            </div>
+        </div>
 
-  <a href="https://www.instagram.com/tamralipta_inst_of_man_nd_tech?igsh=OG05aGIybDR5MjZp">
-    <img src="images/insta.png"
-         style="width:28px; height:28px; border-radius:50%;">
-  </a>
-
-  <a href="https://www.youtube.com/@tamraliptainstituteofmanag3871">
-    <img src="images/yt.png"
-         style="width:28px; height:28px; border-radius:50%;">
-  </a>
-
-</div>
-
-</div>
         <div><h3>Contact</h3><p>Email: timt.institute@gmail.com</p><p>Phone: +91 8697511132</p></div>
     </div>
-   <div class="footer-bottom">
-    © 2025 College Portal | Developed by 
-    <a href="https://www.linkedin.com/in/milanjana143/"
-       style="
-       color:#ffffff;
-       background:#1f3c88;
-       padding:6px 12px;
-       border-radius:20px;
-       text-decoration:none;
-       font-weight:600;
-       margin-left:6px;
-       display:inline-block;
-       ">
-       Milan Jana
-    </a>
-</div>
 
+    <div class="footer-bottom">
+        © 2025 College Portal | Developed by 
+        <a href="https://www.linkedin.com/in/milanjana143/"
+           style="color:#fff;background:#1f3c88;padding:6px 12px;border-radius:20px;text-decoration:none;font-weight:600;">
+           Milan Jana
+        </a>
+    </div>
 </div>
 
 </body>

@@ -22,8 +22,23 @@ $total = mysqli_num_rows($sql);
     font-family:"Segoe UI", Arial, sans-serif;
 }
 
+/* ===== BACKGROUND IMAGE BEHIND FORM ===== */
 body{
-    background:#f4f6fb;
+    position: relative;
+    background: #f4f6fb;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("images/college.jpg") no-repeat center center / cover;
+    opacity: 0.4;              /* 👈 control image visibility */
+    z-index: -1;
 }
 
 /* ================= NAVBAR (MATCHES INDEX) ================= */

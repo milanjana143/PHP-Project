@@ -11,10 +11,10 @@ $total = mysqli_num_rows($sql);
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Student Records</title>
+<title>Student Records | College Portal</title>
 
 <style>
-/* ===== RESET ===== */
+/* ================= RESET ================= */
 *{
     margin:0;
     padding:0;
@@ -26,7 +26,7 @@ body{
     background:#f4f6fb;
 }
 
-/* ===== NAVBAR (SAME AS INDEX / REG) ===== */
+/* ================= NAVBAR (MATCHES INDEX) ================= */
 .navbar{
     background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);
     color:white;
@@ -62,6 +62,7 @@ body{
     margin-left:20px;
     padding:8px 18px;
     border-radius:20px;
+    transition: 0.3s;
 }
 
 .nav-links a.active,
@@ -70,18 +71,19 @@ body{
     color:#203a43;
 }
 
-/* ===== CARD ===== */
+/* ================= CARD & TABLE CONTENT ================= */
 .card{
-    max-width:1200px;
+    max-width:1250px;
     margin:50px auto;
     background:white;
     padding:30px;
     border-radius:16px;
-    box-shadow:0 10px 35px rgba(0,0,0,0.15);
+    box-shadow:0 10px 35px rgba(0,0,0,0.1);
 }
 
 .card h2{
     margin-bottom:6px;
+    color: #333;
 }
 
 .card p{
@@ -89,18 +91,17 @@ body{
     margin-bottom:25px;
 }
 
-/* SEARCH */
 .search-box{
     width:100%;
     padding:14px 16px;
-    border:none;
+    border:1px solid #ddd;
     border-radius:12px;
-    background:#f2f2f2;
-    font-size:14px;
+    background:#f9f9f9;
+    font-size:15px;
     margin-bottom:25px;
+    outline: none;
 }
 
-/* TABLE */
 .table-wrapper{
     overflow-x:auto;
 }
@@ -111,45 +112,61 @@ table{
 }
 
 th, td{
-    padding:12px;
-    border-bottom:1px solid #ddd;
-    text-align:center;
+    padding:14px 12px;
+    border-bottom:1px solid #eee;
+    text-align:left;
     font-size:14px;
 }
 
 th{
-    background:#f7f7f7;
+    background:#f8f9fa;
     font-weight:600;
+    color: #444;
 }
 
-/* EMPTY STATE */
+tr:hover {
+    background: #fdfdfd;
+}
+
 .empty{
     text-align:center;
     padding:50px 0;
     color:#555;
 }
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER (MATCHES INDEX) ================= */
 .footer{
     background:#0f2027;
     color:white;
     padding:40px 50px;
-    margin-top:60px;
+    margin-top: 60px;
 }
 
 .footer-content{
     display:flex;
     justify-content:space-between;
     flex-wrap:wrap;
+    gap: 30px;
 }
 
 .footer h3{
     margin-bottom:12px;
 }
 
+.footer p {
+    line-height: 1.6;
+    font-size: 15px;
+}
+
 .footer a{
     color:#ddd;
     text-decoration:none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer a:hover {
+    color: white;
 }
 
 .footer-bottom{
@@ -158,12 +175,23 @@ th{
     border-top:1px solid #333;
     padding-top:15px;
     font-size:14px;
+    opacity: 0.8;
 }
 
 /* RESPONSIVE */
 @media(max-width:768px){
-    table{
-        font-size:12px;
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links {
+        margin-left: 0;
+    }
+    .nav-links a {
+        margin: 0 5px;
+        padding: 6px 12px;
+        font-size: 13px;
     }
 }
 </style>
@@ -171,75 +199,73 @@ th{
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
     <div class="logo">
-        <img src="images/logo.png">
+        <img src="images/logo.png" alt="Logo">
         <div>
             <h2>Tamralipta Institute of Management & Technology</h2>
-            <span>Affiliated to MAKAUT • Approved by AICTE • Recognised by UGC</span>
+            <span>Affiliated to MAKAUT &nbsp•&nbsp Approved by AICTE &nbsp•&nbsp Recognised by UGC</span>
         </div>
     </div>
     <div class="nav-links">
         <a href="index.php">Home</a>
         <a href="reg.php">Registration</a>
         <a href="view.php" class="active">Student Records</a>
-        <a href="viewdel.php">Edit</a>
+        <a href="viewdel.php">Manage Records</a>
     </div>
 </div>
 
-<!-- CONTENT -->
 <div class="card">
     <h2>Student Records</h2>
-    <p>View and manage all registered students (<?php echo $total; ?> total)</p>
+    <p>Viewing all registered entries (Total: <strong><?php echo $total; ?></strong>)</p>
 
-    <input type="text" class="search-box"
+    <input type="text" class="search-box" id="myInput" onkeyup="searchTable()"
            placeholder="🔍 Search by name, email, course, or college...">
 
     <?php if($total == 0){ ?>
         <div class="empty">
             <p>No students registered yet.</p>
-            <p>Start by registering a new student.</p>
+            <p><a href="reg.php" style="color: #203a43;">Click here to register a new student.</a></p>
         </div>
     <?php } else { ?>
 
     <div class="table-wrapper">
-    <table>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Contact</th>
-            <th>College</th>
-            <th>Qualification</th>
-            <th>Course</th>
-            <th>Fees</th>
-            <th>Paid</th>
-            <th>Remaining</th>
-        </tr>
-
-        <?php while($row = mysqli_fetch_assoc($sql)){ ?>
-        <tr>
-            <td><?php echo $row['name']; ?></td>
-            <td><?php echo $row['surname']; ?></td>
-            <td><?php echo $row['email']; ?></td>
-            <td><?php echo $row['contact']; ?></td>
-            <td><?php echo $row['college']; ?></td>
-            <td><?php echo $row['qualification']; ?></td>
-            <td><?php echo $row['course']; ?></td>
-            <td><?php echo $row['fees']; ?></td>
-            <td><?php echo $row['paid']; ?></td>
-            <td><?php echo $row['remaining']; ?></td>
-        </tr>
-        <?php } ?>
-
-    </table>
+        <table id="recordsTable">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>College</th>
+                    <th>Qualification</th>
+                    <th>Course</th>
+                    <th>Fees</th>
+                    <th>Paid</th>
+                    <th>Remaining</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while($row = mysqli_fetch_assoc($sql)){ ?>
+                <tr>
+                    <td><?php echo $row['name']; ?></td>
+                    <td><?php echo $row['surname']; ?></td>
+                    <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['contact']; ?></td>
+                    <td><?php echo $row['college']; ?></td>
+                    <td><?php echo $row['qualification']; ?></td>
+                    <td><?php echo $row['course']; ?></td>
+                    <td><?php echo $row['fees']; ?></td>
+                    <td><?php echo $row['paid']; ?></td>
+                    <td><?php echo $row['remaining']; ?></td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </div>
-
     <?php } ?>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
     <div class="footer-content">
         <div>
@@ -248,11 +274,12 @@ th{
         </div>
         <div>
             <h3>Quick Links</h3>
-            <p><a href="index.php">Home</a></p>
-            <p><a href="reg.php">Registration</a></p>
+            <a href="index.php">Home</a>
+            <a href="reg.php">Registration</a>
+            <a href="view.php">Student Records</a>
         </div>
         <div>
-            <h3>Contact</h3>
+            <h3>Contact Us</h3>
             <p>Email: timt.institute@gmail.com</p>
             <p>Phone: +91 8697511132</p>
         </div>
@@ -261,6 +288,30 @@ th{
         © 2025 College Portal | Developed by Milan Jana 😊
     </div>
 </div>
+
+<script>
+function searchTable() {
+    var input, filter, table, tr, td, i, j, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("recordsTable");
+    tr = table.getElementsByTagName("tr");
+
+    for (i = 1; i < tr.length; i++) {
+        tr[i].style.display = "none";
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j]) {
+                txtValue = td[j].textContent || td[j].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                    break;
+                }
+            }
+        }
+    }
+}
+</script>
 
 </body>
 </html>

@@ -404,9 +404,9 @@ body{
 
 <!-- STATS -->
 <div class="stats">
-    <div class="stat-box"><h2>5000+</h2><p>Active Students</p></div>
-    <div class="stat-box"><h2>200+</h2><p>Expert Faculty</p></div>
-    <div class="stat-box"><h2>50+</h2><p>Programs Offered</p></div>
+    <div class="stat-box"><h2>500+</h2><p>Active Students</p></div>
+    <div class="stat-box"><h2>20+</h2><p>Expert Faculty</p></div>
+    <div class="stat-box"><h2>10+</h2><p>Programs Offered</p></div>
 </div>
 
 <!-- FACULTY -->

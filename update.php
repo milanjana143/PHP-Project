@@ -70,6 +70,26 @@ body{
     background:#f4f6fb;
 }
 
+
+/* ===== BACKGROUND IMAGE BEHIND FORM ===== */
+body{
+    position: relative;
+    background: #f4f6fb;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("images/college.jpg") no-repeat center center / cover;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+
 /* ===== NAVBAR ===== */
 .navbar{
     background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);

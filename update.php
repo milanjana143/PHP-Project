@@ -264,10 +264,13 @@ body{
                     <label>College</label>
                     <input type="text" name="txtcn" value="<?php echo $row['college']; ?>">
                 </div>
+
                 <div class="field">
                     <label>Qualification</label>
                     <input type="text" name="txtq" value="<?php echo $row['qualification']; ?>">
+                    
                 </div>
+                
                 <div class="field">
                     <label>Course</label>
                     <input type="text" name="txtco" value="<?php echo $row['course']; ?>">

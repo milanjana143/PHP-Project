@@ -279,7 +279,7 @@ body{
                 </div>
                 <div class="field">
                     <label>Contact</label>
-                    <input type="text" name="txtc" placeholder="Enter phone number">
+                    <input type="text" name="txtc" placeholder="+91 0000000000">
                 </div>
             </div>
         </div>
@@ -296,19 +296,20 @@ body{
                     <label>Qualification</label>
                     <select name="txtq">
                         <option value="">Select qualification</option>
-                        <option>High School</option>
-                        <option>Bachelor Degree</option>
+                        <option>Ph. D</option>
                         <option>Master Degree</option>
+                        <option>Bachelor Degree</option>
+                        <option>Higher Secondary</option>
+                        <option>Madhyamik</option>
                     </select>
                 </div>
                 <div class="field">
                     <label>Course *</label>
                     <select name="txtco" required>
                         <option value="">Select course</option>
-                        <option>Computer Science</option>
-                        <option>Engineering</option>
-                        <option>Business Administration</option>
-                        <option>Arts</option>
+                        <option>BCA</option>
+                        <option>BBA</option>
+                        <option>BHM</option>
                     </select>
                 </div>
             </div>

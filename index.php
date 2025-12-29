@@ -73,8 +73,26 @@ body{
 .hero-slider{
     display: flex;
     height: 100%;
-    width: 300vw; /* 3 slides */
-    animation: heroSlide 10s infinite ease-in-out;
+    width: 400vw; /* 3 slides */
+    animation: heroSlide 12s infinite ease-in-out;
+}
+
+/* Animation - Smoothly transitions to the 4th (duplicate) slide before snapping back */
+@keyframes heroSlide {
+    /* Show Slide 1 */
+    0%, 20% { transform: translateX(0); }
+
+    /* Show Slide 2 */
+    25%, 45% { transform: translateX(-100vw); }
+
+    /* Show Slide 3 */
+    50%, 70% { transform: translateX(-200vw); }
+
+    /* Show Slide 4 (which looks like Slide 1) */
+    75%, 95% { transform: translateX(-300vw); }
+
+    /* At 100%, it 'snaps' back to 0 so fast you can't see it */
+    100% { transform: translateX(0); }
 }
 
 /* Each slide */
@@ -90,6 +108,7 @@ body{
 .hero-slide.one{ background-image: url("images/college.jpg"); }
 .hero-slide.two{ background-image: url("images/library.png"); }
 .hero-slide.three{ background-image: url("images/student.png"); }
+
 
 /* Overlay */
 .hero-overlay{

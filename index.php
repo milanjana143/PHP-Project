@@ -18,6 +18,8 @@ body{
 }
 
 /* ================= NAVBAR ================= */
+/* ================= HEADER / NAVBAR ================= */
+/* ================= NAVBAR ================= */
 .navbar{
     background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);
     color:white;
@@ -53,6 +55,7 @@ body{
     margin-left:20px;
     padding:8px 18px;
     border-radius:20px;
+    transition:0.3s;
 }
 
 .nav-links a.active,
@@ -60,6 +63,26 @@ body{
     background:white;
     color:#203a43;
 }
+
+/* ================= NAVBAR RESPONSIVE ================= */
+@media(max-width:768px){
+    .navbar{
+        padding:15px 20px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        margin-left:0;
+    }
+
+    .nav-links a{
+        margin:0 5px;
+        padding:6px 12px;
+        font-size:13px;
+    }
+}
+
 
 
 /* ================= HERO SLIDER (FIXED) ================= */

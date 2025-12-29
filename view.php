@@ -210,7 +210,7 @@ tr:hover{
         <img src="images/logo.png">
         <div>
             <h2>Tamralipta Institute of Management & Technology</h2>
-            <span>Affiliated to MAKAUT • Approved by AICTE • Recognised by UGC</span>
+            <span>Affiliated to MAKAUT &nbsp•&nbsp Approved by AICTE &nbsp•&nbsp Recognised by UGC</span>
         </div>
     </div>
     <div class="nav-links">

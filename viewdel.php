@@ -47,6 +47,7 @@ body::before{
 }
 
 /* ================= NAVBAR ================= */
+/* ================= NAVBAR ================= */
 .navbar{
     background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);
     color:white;
@@ -90,6 +91,26 @@ body::before{
     background:white;
     color:#203a43;
 }
+
+/* ================= NAVBAR RESPONSIVE ================= */
+@media(max-width:768px){
+    .navbar{
+        padding:15px 20px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        margin-left:0;
+    }
+
+    .nav-links a{
+        margin:0 5px;
+        padding:6px 12px;
+        font-size:13px;
+    }
+}
+
 
 /* ================= CONTENT CARD ================= */
 .card{
@@ -136,14 +157,21 @@ th{
 
 /* ACTION BUTTONS */
 .action-btn{
-    padding:8px 15px;
+    width:50px;              /* 🔥 FORCE SAME WIDTH */
+    height:36px;             /* 🔥 FORCE SAME HEIGHT */
     border-radius:6px;
     font-size:13px;
     text-decoration:none;
     font-weight:600;
-    display:inline-block;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
     transition:0.2s;
 }
+
+
 
 .edit-btn{
     background:#1f3c88;
@@ -223,7 +251,7 @@ th{
         <img src="images/logo.png">
         <div>
             <h2>Tamralipta Institute of Management & Technology</h2>
-            <span>Affiliated to MAKAUT • Approved by AICTE • Recognised by UGC</span>
+            <span>Affiliated to MAKAUT &nbsp•&nbsp Approved by AICTE &nbsp•&nbsp Recognised by UGC</span>
         </div>
     </div>
     <div class="nav-links">
@@ -275,16 +303,18 @@ th{
                     <td><?php echo $row['paid']; ?></td>
                     <td><?php echo $row['remaining']; ?></td>
                     <td>
-                        <a class="action-btn edit-btn"
-                           href="update.php?id=<?php echo $row['id']; ?>">
-                           Edit
-                        </a>
-                        <br>
-                        <a class="action-btn delete-btn"
-                           href="delete.php?id=<?php echo $row['id']; ?>"
-                           onclick="return confirm('Are you sure you want to delete this record?')">
-                           Delete
-                        </a>
+                        <div style="display:flex; justify-content:center; gap:8px;">
+                            <a class="action-btn edit-btn"
+                            href="update.php?id=<?php echo $row['id']; ?>">
+                            Edit
+                            </a>
+
+                            <a class="action-btn delete-btn"
+                            href="delete.php?id=<?php echo $row['id']; ?>"
+                            onclick="return confirm('Are you sure you want to delete this record?')">
+                            Delete
+                            </a>
+                        </div>
                     </td>
                 </tr>
             <?php } ?>

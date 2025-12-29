@@ -203,6 +203,46 @@ body{
         grid-template-columns:1fr;
     }
 }
+
+
+/* ===== FOOTER (FROM INDEX.PHP) ===== */
+.footer{
+    background:#0f2027;
+    color:white;
+    padding:10px 50px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.footer h3{
+    margin: bottom 6px;
+}
+
+.footer a{
+    color:#ddd;
+    text-decoration:none;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:15px;
+    border-top:1px solid #333;
+    padding-top:8px;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+/* @media(max-width:768px){
+    .grid-2,.grid-3{
+        grid-template-columns:1fr;
+    }
+} */
+
+
 </style>
 </head>
 
@@ -306,6 +346,34 @@ body{
 
     </form>
 </div>
+
+
+<div class="footer">
+    <div class="footer-content">
+        <div><h3>TIMT</h3><p>Where education meets innovation.</p></div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <div style="margin-top:15px; display:flex; gap:14px;">
+                <a href="https://www.facebook.com/timttmluk"><img src="images/fb.png" style="width:28px;height:28px;border-radius:50%;"></a>
+                <a href="https://www.instagram.com/tamralipta_inst_of_man_nd_tech"><img src="images/insta.png" style="width:28px;height:28px;border-radius:50%;"></a>
+                <a href="https://www.youtube.com/@tamraliptainstituteofmanag3871"><img src="images/yt.png" style="width:28px;height:28px;border-radius:50%;"></a>
+            </div>
+        </div>
+
+        <div><h3>Contact</h3><p>Email: timt.institute@gmail.com</p><p>Phone: +91 8697511132</p></div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 College Portal | Developed by 
+        <a href="https://www.linkedin.com/in/milanjana143/"
+           style="color:#fff;background:#1f3c88;padding:6px 12px;border-radius:20px;text-decoration:none;font-weight:600;">
+           Milan Jana
+        </a>
+    </div>
+</div>
+
+
 
 </body>
 </html>

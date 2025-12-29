@@ -221,7 +221,7 @@ body{
         <a href="index.php">Home</a>
         <a href="reg.php">Registration</a>
         <a href="view.php">Student Records</a>
-        <a href="viewdel.php" class="active">Edit</a>
+        <a href="viewdel.php" class="active">Manage Records</a>
     </div>
 </div>
 

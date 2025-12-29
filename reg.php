@@ -334,7 +334,7 @@ body::before{
                 </div>
                 <div class="field">
                     <label>Qualification</label>
-                    <select name="txtq">
+                    <select name="txtq" required>
                         <option value="">Select qualification</option>
                         <option>Ph. D</option>
                         <option>Master Degree</option>
@@ -365,7 +365,7 @@ body::before{
                 </div>
                 <div class="field">
                     <label>Paid</label>
-                    <input type="number" name="txtp" placeholder="Amount paid">
+                    <input type="number" name="txtp" value="0" min="0">
                 </div>
                 <div class="field">
                     <label>Remaining</label>

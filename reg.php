@@ -319,7 +319,7 @@ body::before{
                 </div>
                 <div class="field">
                     <label>Contact</label>
-                    <input type="text" name="txtc" placeholder="+91 0000000000">
+                    <input type="text" name="txtc" required placeholder="+91 0000000000">
                 </div>
             </div>
         </div>
@@ -330,7 +330,7 @@ body::before{
             <div class="grid-2">
                 <div class="field">
                     <label>College</label>
-                    <input type="text" name="txtcn" placeholder="Enter college name">
+                    <input type="text" name="txtcn" required placeholder="Enter college name">
                 </div>
                 <div class="field">
                     <label>Qualification</label>
@@ -361,7 +361,7 @@ body::before{
             <div class="grid-3">
                 <div class="field">
                     <label>Fees</label>
-                    <input type="number" name="txtf" placeholder="Total fees">
+                    <input type="number" name="txtf" required placeholder="Total fees">
                 </div>
                 <div class="field">
                     <label>Paid</label>

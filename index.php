@@ -256,7 +256,7 @@ body{
 .faculty-card{
     min-width: 220px;   /* 👈 THIS CONTROLS WIDTH */
     max-width: 220px;   /* 👈 KEEP CONSISTENT */
-    background:white;
+    background: #c9ada7;
     border-radius:14px;
     overflow:hidden;
     box-shadow:0 8px 25px rgba(0,0,0,0.15);

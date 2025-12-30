@@ -179,9 +179,10 @@ tr:hover{
 
 .footer-bottom{
     text-align:center;
-    margin-top:15px;
+    margin-top:20px;
     border-top:1px solid #333;
-    padding-top:8px;
+    padding-top:13px;
+    padding-bottom:10px;
     font-size:14px;
 }
 
@@ -313,7 +314,7 @@ body{
     </div>
 
     <div class="footer-bottom">
-        © 2025 College Portal | Developed by 
+        © 2025 College Portal || Developed by 
         <a href="https://www.linkedin.com/in/milanjana143/"
            style="color:#fff;background:#1f3c88;padding:6px 12px;border-radius:20px;text-decoration:none;font-weight:600;">
            Milan Jana

@@ -344,9 +344,10 @@ body{
 
 .footer-bottom{
     text-align:center;
-    margin-top:15px;
+    margin-top:20px;
     border-top:1px solid #333;
-    padding-top:8px;
+    padding-top:13px;
+    padding-bottom:10px;
     font-size:14px;
 }
 
@@ -534,7 +535,7 @@ body{
         <div><h3>Contact</h3><p>Email: timt.institute@gmail.com</p><p>Phone: +91 8697511132</p></div>
     </div>
    <div class="footer-bottom">
-    © 2025 College Portal | Developed by 
+    © 2025 College Portal || Developed by 
     <a href="https://www.linkedin.com/in/milanjana143/"
        style="
        color:#ffffff;

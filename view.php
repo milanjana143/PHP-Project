@@ -230,7 +230,7 @@ body{
         <img src="images/logo.png">
         <div>
             <h2>Tamralipta Institute of Management & Technology</h2>
-            <span>Affiliated to MAKAUT &nbsp•&nbsp Approved by AICTE &nbsp•&nbsp Recognised by UGC</span>
+            <span>ESTD 2007 &nbsp•&nbsp MAKAUT University</span>
         </div>
     </div>
     <div class="nav-links">
@@ -304,9 +304,9 @@ body{
         <div>
             <h3>Quick Links</h3>
             <div style="margin-top:15px; display:flex; gap:14px;">
-                <a href="https://www.facebook.com/timttmluk"><img src="images/fb.png" style="width:28px;height:28px;border-radius:50%;"></a>
-                <a href="https://www.instagram.com/tamralipta_inst_of_man_nd_tech"><img src="images/insta.png" style="width:28px;height:28px;border-radius:50%;"></a>
-                <a href="https://www.youtube.com/@tamraliptainstituteofmanag3871"><img src="images/yt.png" style="width:28px;height:28px;border-radius:50%;"></a>
+                <a href="https://www.facebook.com/timttmluk" target="_blank"><img src="images/fb.png" style="width:28px;height:28px;border-radius:50%;"></a>
+                <a href="https://www.instagram.com/tamralipta_inst_of_man_nd_tech" target="_blank"><img src="images/insta.png" style="width:28px;height:28px;border-radius:50%;"></a>
+                <a href="https://www.youtube.com/@tamraliptainstituteofmanag3871" target="_blank"><img src="images/yt.png" style="width:28px;height:28px;border-radius:50%;"></a>
             </div>
         </div>
 
@@ -315,7 +315,7 @@ body{
 
     <div class="footer-bottom">
         © 2025 College Portal || Developed by 
-        <a href="https://www.linkedin.com/in/milanjana143/"
+        <a href="https://milan-jana-portfolio.vercel.app/" target="_blank"
            style="color:#fff;background:#1f3c88;padding:6px 12px;border-radius:20px;text-decoration:none;font-weight:600;">
            Milan Jana
         </a>

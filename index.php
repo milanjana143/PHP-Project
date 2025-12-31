@@ -85,6 +85,80 @@ body{
 
 
 
+
+/* college introduction */
+.stats{
+border-radius:20px;
+padding:0 20px;
+/* margin:25px auto; */
+margin:35px 0px 5px 0px;
+height:60px;              /* small but usable */
+width:100%;
+box-shadow:0 15px 35px rgba(0,0,0,0.1);
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+text-align:center;
+}
+
+
+
+/* course template- bca, bba , bhm */
+.cards-row{
+    display:flex;
+    width:calc(100% - 70px);   /* ⬅ reduce width */
+    margin:0 auto;             /* ⬅ center it */
+    gap:25px;
+}
+
+
+.card{
+    flex:1;
+    background:#16476A;
+    color:#fff;
+    border-radius:18px;
+    padding:30px 25px;
+    text-align:center;
+    box-shadow:0 15px 30px rgba(0,0,0,0.35);
+}
+
+.card-img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+
+.card h2{
+    font-size:22px;
+    color:#fb8500;
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:16px;
+    line-height:1.6;
+    color:#ddd;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#c76b00;
+    color:#fff;
+    padding:10px 22px;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+
+
+
+
+
 /* ================= HERO SLIDER (FIXED) ================= */
 .hero{
     position: relative;
@@ -403,11 +477,124 @@ body{
     Expert Faculties • Smart Learning • Career Focused Education
 </div>
 
-<!-- STATS -->
-<div class="stats">
-    <div class="stat-box"><h2>500+</h2><p>Active Students</p></div>
-    <div class="stat-box"><h2>20+</h2><p>Expert Faculty</p></div>
-    <div class="stat-box"><h2>10+</h2><p>Programs Offered</p></div>
+
+
+
+
+
+
+
+
+<div style="
+    max-width:95%;
+    margin:60px auto;
+    background:#4a4e69;
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+">
+
+    <!-- FULL WIDTH TOP HEADING -->
+    <h1 style="
+        font-size:38px;
+        margin-bottom:35px;
+        color:#ff9f43;
+        text-align:center;
+        line-height:1.25;
+    ">
+        Tamralipta Institute of Management & Technology
+    </h1>
+
+    <!-- CONTENT ROW -->
+    <div style="
+        display:flex;
+        gap:40px;
+        align-items:stretch;
+    ">
+
+        <!-- LEFT CONTENT -->
+        <div style="
+            flex:1;
+            color:#fff;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+        ">
+
+            <!-- TEXT BLOCK (LOGOS + PARAGRAPH SAME WIDTH) -->
+            <div style="max-width:520px;">
+
+                <!-- LOGOS ROW -->
+                <div style="
+                    display:flex;
+                    justify-content:space-between;
+                    margin:20px 0 18px 0;
+                ">
+
+                    <div style="text-align:left;">
+                        <p style="color:#00d2ff;font-weight:600;margin-bottom:8px;">
+                            AFFILIATED TO
+                        </p>
+                        <img src="images/makaut.jpg" style="width:110px;">
+                    </div>
+
+                    <div style="text-align:center;">
+                        <p style="color:#ffa502;font-weight:600;margin-bottom:8px;">
+                            APPROVED BY
+                        </p>
+                        <img src="images/aicte.jpg" style="width:110px;">
+                    </div>
+
+                    <div style="text-align:right;">
+                        <p style="color:#ff6b81;font-weight:600;margin-bottom:8px;">
+                            RECOGNISED BY
+                        </p>
+                        <img src="images/ugc.jpg" style="width:110px;">
+                    </div>
+
+                </div>
+
+                <!-- DESCRIPTION -->
+                <p style="
+                    color:#ddd;
+                    font-size:15px;
+                    line-height:1.7;
+                    text-align:justify;
+                ">
+                    The Tamralipta Institute of Management & Technology (TIMT) is situated at
+                    Tamluk, the district headquarters of Purba Medinipur. It is affiliated to
+                    Maulana Abul Kalam Azad University of Technology (MAKAUT), West Bengal.
+                    TIMT is approved by AICTE and recognised by UGC, known for quality education,
+                    strong infrastructure, and experienced faculty. <br> <br>
+
+                    We deliver quality academics and co-curricular opportunities through effective teaching and 
+                    modern facilities. Established in 2007 by Haji Sk Kazem Ali under the N.H.K Welfare Foundation, 
+                    TIMT aims to develop industry-ready professionals for a globalizing nation. It expanded programs 
+                    and affiliations.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div style="flex:1;">
+            <img src="images/college.jpg" style="
+                width:100%;
+                height:100%;
+                object-fit:cover;
+                border-radius:14px;
+                box-shadow:0 15px 30px rgba(0,0,0,0.5);
+            ">
+        </div>
+
+    </div>
+
+    <!-- STATS -->
+        <div class="stats" style="background:#c9ada7;">
+            <div class="stat-box"><h2>500+</h2><p><b>Active Students</b></p></div>
+            <div class="stat-box"><h2>20+</h2><p><b>Expert Faculty</b></p></div>
+            <div class="stat-box"><h2>10+</h2><p><b>Programs Offered</b></p></div>
+        </div>
 </div>
 
 
@@ -415,6 +602,57 @@ body{
 
 
 
+
+
+
+
+
+<div class="cards-row">
+
+    <div class="card">
+        <img src="images/bca.png" class="card-img">
+        <h2>BACHELOR OF COMPUTER APPLICATION</h2>
+        <p>
+            A Bachelor of Computer Application (BCA) degree provides
+            strong foundations in computer programming, software development, 
+            and IT skills for careers in the technology sector.
+        </p>
+        <!-- <a href="#" class="btn">Read More</a> -->
+    </div>
+
+    <div class="card">
+        <img src="images/bba.png" class="card-img">
+        <h2>BACHELOR OF BUSINESS ADMINISTRATION</h2>
+        <p>
+            A Bachelor of Business Administration (BBA) degree helps
+            to develop the managerial, innovative, leadership, and entrepreneurial skills 
+            required for success in business and corporate environments.
+        </p>
+        <!-- <a href="#" class="btn">Read More</a> -->
+    </div>
+
+    <div class="card">
+        <img src="images/bhm.png" class="card-img">
+        <h2>BACHELOR OF HOSPITAL MANAGEMENT</h2>
+        <p>
+            A Bachelor of Hospital Management (BHM) degree helps
+            to prepare students for careers in hospital and hospitality 
+            management, focusing on operations, administration, and service excellence.
+        </p>
+        <!-- <a href="#" class="btn">Read More</a> -->
+    </div>
+
+    <div class="card">
+        <img src="images/msc.png" class="card-img">
+        <h2>MSC. IN COMPUTER SCIENCE</h2>
+        <p>
+            A MSc degree in Computer Science helps to provide advanced 
+            knowledge in computing, software systems, and research-oriented IT careers for future professionals worldwide.
+        </p>
+        <!-- <a href="#" class="btn">Read More</a> -->
+    </div>
+
+</div>
 
 
 

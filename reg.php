@@ -317,18 +317,18 @@ body::before{
 
 <!-- FORM -->
 <div class="form-wrapper">
-    <h2>Student Registration Form</h2>
-    <p>Please fill in all the required information to register a new student</p>
+    <h1>Student Registration Form</h1>
+    <p>Please fill in all the required information to register a new student.</p>
 
     <form method="post"
     oninput="txtr.value=parseInt(txtf.value||0)-parseInt(txtp.value||0)">
 
         <!-- PERSONAL -->
         <div class="section">
-            <h3>Personal Information</h3>
+            <h3 style="font-size:25px; font-weight:650; color:#1f3c88;">Personal Information : </h3>
             <div class="grid-2">
                 <div class="field">
-                    <label>Name *</label>
+                    <label >Name *</label>
                     <input type="text" name="txtn" required placeholder="Enter first name">
                 </div>
                 <div class="field">
@@ -340,7 +340,7 @@ body::before{
                     <input type="email" name="txte" required placeholder="student@example.com">
                 </div>
                 <div class="field">
-                    <label>Contact</label>
+                    <label>Contact *</label>
                     <input type="text" name="txtc" required placeholder="+91 0000000000">
                 </div>
             </div>
@@ -348,14 +348,14 @@ body::before{
 
         <!-- ACADEMIC -->
         <div class="section">
-            <h3>Academic Information</h3>
+            <h3 style="font-size:25px; font-weight:650; color:#1f3c88;">Academic Information : </h3>
             <div class="grid-2">
                 <div class="field">
-                    <label>College</label>
+                    <label>College *</label>
                     <input type="text" name="txtcn" required placeholder="Enter college name">
                 </div>
                 <div class="field">
-                    <label>Qualification</label>
+                    <label>Qualification *</label>
                     <select name="txtq" required>
                         <option value="">Select qualification</option>
                         <option>Ph. D</option>
@@ -379,14 +379,14 @@ body::before{
 
         <!-- FEES -->
         <div class="section">
-            <h3>Fee Information</h3>
+            <h3 style="font-size:25px; font-weight:650; color:#1f3c88;">Fees Information :</h3>
             <div class="grid-3">
                 <div class="field">
-                    <label>Fees</label>
+                    <label>Fees *</label>
                     <input type="number" name="txtf" required placeholder="Total fees">
                 </div>
                 <div class="field">
-                    <label>Paid</label>
+                    <label>Paid *</label>
                     <input type="number" name="txtp" value="0" min="0">
                 </div>
                 <div class="field">
@@ -397,7 +397,7 @@ body::before{
         </div>
 
 
-            <h2 style="font-size:18px; margin-bottom:10px; color:#333;">Personal Feedback</h2>
+            <h3 style="font-size:25px; font-weight:650; color:#1f3c88;">Personal Feedback :</h3> <br>
             <!-- <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:15px;">
                 <div style="flex:1; min-width:200px;">
                 <label for="firstName" style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">First Name</label>
@@ -424,7 +424,7 @@ body::before{
 
 
             <div style="margin-bottom:15px;">
-                <label for="referral" style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">How did you hear about our college?</label>
+                <label for="referral" style="display:block; margin-bottom:5px; font-size:22px; font-weight:550; color:black;">How did you hear about our college?</label>
                 <select id="referral" name="referral" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; background-color:#f9f9f9; font-size:14px;">
                 <option value="" disabled selected>Select an option</option>
                 <option value="friend">Friend or Family</option>
@@ -436,7 +436,7 @@ body::before{
                 </select>
             </div>
             <div style="margin-bottom:15px;">
-                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Was the registration process easy to understand?</label>
+                <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Was the registration process easy to understand?</label>
                 <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
                 <input type="radio" name="reg" value="yes" style="margin-right:5px; cursor:pointer;"> Yes
                 </label>
@@ -446,7 +446,7 @@ body::before{
             </div>
 
             <div style="margin-bottom:15px;">
-                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Did you get clear guidance during admission?</label>
+                <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Did you get clear guidance during admission?</label>
                 <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
                 <input type="radio" name="guide" value="yes" style="margin-right:5px; cursor:pointer;"> Yes
                 </label>
@@ -456,7 +456,7 @@ body::before{
             </div>
 
             <div style="margin-bottom:15px;">
-                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Were the staff members helpful?</label>
+                <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Were the staff members helpful?</label>
                 <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
                 <input type="radio" name="staff" value="yes" style="margin-right:5px; cursor:pointer;"> Yes
                 </label>
@@ -466,7 +466,7 @@ body::before{
             </div>
 
             <div style="margin-bottom:15px;">
-                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Did you face any difficulty while submitting documents?</label>
+                <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Did you face any difficulty while submitting documents?</label>
                 <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
                 <input type="radio" name="diff" value="yes" style="margin-right:5px; cursor:pointer;"> Yes
                 </label>
@@ -476,7 +476,7 @@ body::before{
             </div>
 
             <div style="margin-bottom:15px;">
-                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Was the admission procedure completed on time?</label>
+                <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Was the admission procedure completed on time?</label>
                 <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
                 <input type="radio" name="addmission" value="yes" style="margin-right:5px; cursor:pointer;"> Yes
                 </label>
@@ -486,7 +486,7 @@ body::before{
             </div>
 
             <div style="margin-bottom:15px;">
-                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Do you like extra-curricular activities?</label>
+                <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Do you like extra-curricular activities?</label>
                 <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
                 <input type="radio" name="curr" value="yes" style="margin-right:5px; cursor:pointer;"> Yes
                 </label>
@@ -496,7 +496,7 @@ body::before{
             </div>
 
             <div style="margin-bottom:15px;">
-                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Do you have any physical disabilities?</label>
+                <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Do you have any physical disabilities?</label>
                 <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
                 <input type="radio" name="disab" value="yes" style="margin-right:5px; cursor:pointer;"> Yes
                 </label>
@@ -506,7 +506,7 @@ body::before{
             </div>
 
             <div style="margin-bottom:15px;">
-                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Do you have any financial crises?</label>
+                <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Do you have any financial crises?</label>
                 <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
                 <input type="radio" name="finance" value="yes" style="margin-right:5px; cursor:pointer;"> Yes
                 </label>
@@ -515,11 +515,11 @@ body::before{
                 </label>
             </div>
 
-            <h2 style="font-size:18px; margin:18px 0 10px; color:#333;">Ratings</h2>
+            <h3 style="font-size:25px; font-weight:650; color:#1f3c88;">Ratings :</h3> <br>
 
             <!-- ONE ROW -->
             <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
-            <span style="font-weight:600; color:#555; min-width:180px;">Classroom Environment</span>
+            <span style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Classroom Environment</span>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
                 <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
                 <input type="radio" name="class" value="Good"> Average
@@ -538,7 +538,7 @@ body::before{
 
             <!-- ONE ROW -->
             <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
-            <span style="font-weight:600; color:#555; min-width:180px;">Teaching Quality</span>
+            <span style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Teaching Quality</span>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
                 <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
                 <input type="radio" name="teach" value="Good"> Average
@@ -557,7 +557,7 @@ body::before{
 
             <!-- ONE ROW -->
             <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
-            <span style="font-weight:600; color:#555; min-width:180px;">Laboratory Facilities</span>
+            <span style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Laboratory Facilities</span>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
                 <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
                 <input type="radio" name="lab" value="Good"> Average
@@ -576,7 +576,7 @@ body::before{
 
             <!-- ONE ROW -->
             <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
-            <span style="font-weight:600; color:#555; min-width:180px;">Library Resources</span>
+            <span style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Library Resources</span>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
                 <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
                 <input type="radio" name="library" value="Good"> Average
@@ -595,7 +595,7 @@ body::before{
 
             <!-- ONE ROW -->
             <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
-            <span style="font-weight:600; color:#555; min-width:180px;">Campus Infrastructure</span>
+            <span style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Campus Infrastructure</span>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
                 <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
                 <input type="radio" name="campus" value="Good"> Average
@@ -614,7 +614,7 @@ body::before{
 
             <!-- ONE ROW -->
             <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
-            <span style="font-weight:600; color:#555; min-width:180px;">Availability of Study Materials</span>
+            <span style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Availability of Study Materials</span>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
                 <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
                 <input type="radio" name="meterials" value="Good"> Average
@@ -633,7 +633,7 @@ body::before{
 
             <!-- ONE ROW -->
             <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
-            <span style="font-weight:600; color:#555; min-width:180px;">Support from Teachers and Staff</span>
+            <span style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Support from Teachers and Staff</span>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
                 <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
                 <input type="radio" name="support" value="Good"> Average
@@ -652,7 +652,7 @@ body::before{
 
             <!-- ONE ROW -->
             <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
-            <span style="font-weight:600; color:#555; min-width:180px;">Cleanliness and Maintenance</span>
+            <span style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Cleanliness and Maintenance</span>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
                 <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
                 <input type="radio" name="clean" value="Good"> Average
@@ -671,10 +671,10 @@ body::before{
 
             <!-- ONE ROW -->
             <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
-            <span style="font-weight:600; color:#555; min-width:180px;">Overall Experience</span>
+            <span style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Overall Experience</span>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
                 <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
-                <input type="radio" name="overall" value="Good"> Averagr
+                <input type="radio" name="overall" value="Good"> Average
                 </label>
                 <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
                 <input type="radio" name="overall" value="Good"> Good

@@ -178,9 +178,6 @@ text-align:center;
 
 
 
-
-
-
 /* ================= HERO SLIDER (FIXED) ================= */
 .hero{
     position: relative;
@@ -635,9 +632,7 @@ text-align:center;
         <img src="images/bca.png" class="card-img">
         <h2>BACHELOR OF COMPUTER APPLICATION</h2>
         <p>
-            A Bachelor of Computer Application (BCA) degree provides
-            strong foundations in computer programming, software development, 
-            and IT skills for careers in the technology sector.
+            A Bachelor of Computer Application (BCA) degree provides strong foundations in computer programming, software development, and IT skills for careers in the technology sector.
         </p>
         <!-- <a href="#" class="btn">Read More</a> -->
     </div>
@@ -646,9 +641,7 @@ text-align:center;
         <img src="images/bba.png" class="card-img">
         <h2>BACHELOR OF BUSINESS ADMINISTRATION</h2>
         <p>
-            A Bachelor of Business Administration (BBA) degree helps
-            to develop the managerial, innovative, leadership, and entrepreneurial skills 
-            required for success in business and corporate environments.
+            A Bachelor of Business Administration (BBA) degree helps to develop the managerial, innovative, leadership, and entrepreneurial skills required for success in business and corporate environments.
         </p>
         <!-- <a href="#" class="btn">Read More</a> -->
     </div>
@@ -657,9 +650,7 @@ text-align:center;
         <img src="images/bhm.png" class="card-img">
         <h2>BACHELOR OF HOSPITAL MANAGEMENT</h2>
         <p>
-            A Bachelor of Hospital Management (BHM) degree helps
-            to prepare students for careers in hospital and hospitality 
-            management, focusing on operations, administration, and service excellence.
+            A Bachelor of Hospital Management (BHM) degree helps to prepare students for careers in hospital and hospitality management, focusing on operations, administration, and service excellence.
         </p>
         <!-- <a href="#" class="btn">Read More</a> -->
     </div>
@@ -668,8 +659,7 @@ text-align:center;
         <img src="images/msc.png" class="card-img">
         <h2>MSC. IN COMPUTER SCIENCE</h2>
         <p>
-            A MSc degree in Computer Science helps to provide advanced 
-            knowledge in computing, software systems, and research-oriented IT careers for future professionals worldwide.
+            A MSc degree in Computer Science helps to provide advanced knowledge in computing, software systems, and research-oriented IT careers for future professionals worldwide.
         </p>
         <!-- <a href="#" class="btn">Read More</a> -->
     </div>

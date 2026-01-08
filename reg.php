@@ -318,7 +318,7 @@ body::before{
 <!-- FORM -->
 <div class="form-wrapper">
     <h1>Student Registration Form</h1>
-    <p>Please fill in all the required information to register a new student.</p>
+    <p style="font-size:17px;">Please fill in all the required information to register a new student.</p>
 
     <form method="post"
     oninput="txtr.value=parseInt(txtf.value||0)-parseInt(txtp.value||0)">
@@ -328,19 +328,19 @@ body::before{
             <h3 style="font-size:25px; font-weight:650; color:#1f3c88;">Personal Information : </h3>
             <div class="grid-2">
                 <div class="field">
-                    <label >Name *</label>
-                    <input type="text" name="txtn" required placeholder="Enter first name">
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Name *</label>
+                    <input type="text" name="txtn" required placeholder= "Enter First Name">
                 </div>
                 <div class="field">
-                    <label>Surname *</label>
-                    <input type="text" name="txtsn" required placeholder="Enter surname">
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Surname *</label>
+                    <input type="text" name="txtsn" required placeholder="Enter Surname">
                 </div>
                 <div class="field">
-                    <label>Email *</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Email *</label>
                     <input type="email" name="txte" required placeholder="student@example.com">
                 </div>
                 <div class="field">
-                    <label>Contact *</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Contact *</label>
                     <input type="text" name="txtc" required placeholder="+91 0000000000">
                 </div>
             </div>
@@ -351,24 +351,24 @@ body::before{
             <h3 style="font-size:25px; font-weight:650; color:#1f3c88;">Academic Information : </h3>
             <div class="grid-2">
                 <div class="field">
-                    <label>College *</label>
-                    <input type="text" name="txtcn" required placeholder="Enter college name">
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">College *</label>
+                    <input type="text" name="txtcn" required placeholder="Enter College Name">
                 </div>
                 <div class="field">
-                    <label>Qualification *</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Qualification *</label>
                     <select name="txtq" required>
-                        <option value="">Select qualification</option>
-                        <option>Ph. D</option>
-                        <option>Master Degree</option>
-                        <option>Bachelor Degree</option>
-                        <option>Higher Secondary</option>
-                        <option>Madhyamik</option>
+                        <option value="">Select Qualification</option>
+                        <option>MP</option>
+                        <option>HS</option>
+                        <option>UG</option>
+                        <option>PG</option>
+                        <option>Ph.D.</option>
                     </select>
                 </div>
                 <div class="field">
-                    <label>Course *</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Course *</label>
                     <select name="txtco" required>
-                        <option value="">Select course</option>
+                        <option value="">Select Course</option>
                         <option>BCA</option>
                         <option>BBA</option>
                         <option>BHM</option>
@@ -382,15 +382,15 @@ body::before{
             <h3 style="font-size:25px; font-weight:650; color:#1f3c88;">Fees Information :</h3>
             <div class="grid-3">
                 <div class="field">
-                    <label>Fees *</label>
-                    <input type="number" name="txtf" required placeholder="Total fees">
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Fees *</label>
+                    <input type="number" name="txtf" required placeholder="Total Fees">
                 </div>
                 <div class="field">
-                    <label>Paid *</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Paid *</label>
                     <input type="number" name="txtp" value="0" min="0">
                 </div>
                 <div class="field">
-                    <label>Remaining</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Remaining</label>
                     <input type="number" name="txtr" readonly value="0">
                 </div>
             </div>

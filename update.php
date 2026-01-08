@@ -335,8 +335,8 @@ body::before{
 
 <!-- FORM -->
 <div class="form-wrapper">
-    <h2>Update Student Record</h2>
-    <p>Edit and update student information</p>
+    <h1>Update Student Record</h1>
+    <p style="font-size:17px;">Edit and update student information.</p>
 
     <form method="post"
     oninput="txtr.value=parseInt(txtf.value||0)-parseInt(txtp.value||0)">

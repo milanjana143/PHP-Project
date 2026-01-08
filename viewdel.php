@@ -304,8 +304,8 @@ body{
 
 <div class="page-content">
     <div class="card">
-        <h2>Edit / Delete Student Records</h2>
-        <p>Manage registered students (Total: <strong><?php echo $total; ?></strong>)</p>
+        <h1>Edit / Delete Student Records</h1>
+        <p style="font-size:17px;">Manage registered students (Total: <strong><?php echo $total; ?></strong>)</p>
 
         <?php if($total == 0){ ?>
             <div class="empty">

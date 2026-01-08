@@ -284,8 +284,8 @@ body{
 
 <div class="page-content">
     <div class="card">
-        <h2>Student Records</h2>
-        <p>Viewing all registered entries (Total: <strong><?php echo $total; ?></strong>)</p>
+        <h1>Student Records</h1>
+        <p style="font-size:17px;">Viewing all registered entries (Total: <strong><?php echo $total; ?></strong>)</p>
 
         <input type="text" class="search-box" id="myInput" onkeyup="searchTable()"
             placeholder="🔍 Search by name, email, course, or college...">

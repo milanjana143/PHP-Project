@@ -405,6 +405,70 @@ body::before{
             </div>
         </div>
 
+
+        <h3 style="font-size:25px; font-weight:650; color:#1f3c88;">Terms & Conditions :</h3><br>
+
+        <p style="display:block; margin-bottom:5px; font-size:15px; color:black;">
+        Before making any changes to student information, please read the following terms and conditions
+        carefully. These guidelines are designed to protect the accuracy, privacy, and integrity of
+        student records maintained by the institution. By proceeding with the update process, you agree
+        to follow all rules stated below.
+        </p> <br>
+
+        <div style="max-height:650px; overflow-y:auto; border:1px solid #ccc; padding:12px; border-radius:8px; background:#f9f9f9;">
+
+            <ul style="font-size:14px; color:#555; line-height:1.7; padding-left:20px; margin-bottom:15px;">
+            <li>All information entered or modified must be accurate, complete, and up to date.</li>
+            <li>Providing false, misleading, or incomplete details may affect official student records.</li>
+            <li>Proper authorization is required before editing, deleting, or accessing any student data.</li>
+            <li>Every change made in the system is logged and stored for record-keeping and audit purposes.</li>
+            <li>Unauthorized access or modification of student records is treated as a serious policy violation.</li>
+            <li>Misuse of the system, including intentional data manipulation, may result in disciplinary action.</li>
+            <li>Access privileges may be suspended or revoked in cases of repeated or severe misuse.</li>
+            <li>Legal action may be taken if student data is altered, shared, or handled irresponsibly.</li>
+            <li>Confidentiality of student information must be maintained at all times.</li>
+            <li>Any technical or data-related issues should be reported immediately to the system administrator.</li>
+            <li>System access is granted only for official academic and administrative purposes.</li>
+            <li>Sharing login credentials or allowing unauthorized users to access the system is strictly prohibited.</li>
+            <li>All users are responsible for protecting sensitive student data from accidental or intentional exposure.</li>
+            <li>Edits made to student records should follow institutional guidelines and approval procedures.</li>
+            <li>Any attempt to bypass system security or controls will be treated as a serious offense.</li>
+            <li>Regular audits may be conducted to ensure compliance with data protection policies.</li>
+            <li>Failure to comply with institutional rules may lead to restricted system access.</li>
+            <li>All activities performed in the system are subject to monitoring for security purposes.</li>
+            <li>Students’ personal and academic information must be handled with care and professionalism.</li>
+            <li>In case of uncertainty, guidance should be sought from authorized staff before making changes.</li>
+            <li>All updates should be reviewed carefully before final submission to avoid accidental errors.</li>
+            <li>Changes made to student records cannot be reversed once officially approved.</li>
+            <li>Only authorized staff members are permitted to handle sensitive academic data.</li>
+            <li>Any form of data duplication or unauthorized copying is strictly prohibited.</li>
+            <li>Records must be updated in accordance with institutional data protection policies.</li>
+            <li>Users are expected to log out after completing their work to maintain system security.</li>
+            <li>Any unusual system behavior should be reported immediately to technical support.</li>
+            <li>Editing privileges may vary depending on user roles and access levels.</li>
+            <li>All information handled through this system must comply with privacy regulations.</li>
+            <li>Failure to follow proper data-handling procedures may result in restricted system access.</li>
+
+            </ul>
+        </div>   <br> 
+
+        <p style="display:block; margin-bottom:5px; font-size:15px; color:black;">
+        If you do not agree with these terms and conditions, please do not proceed with editing the student
+        information. For any clarification regarding data usage or access rights, kindly contact the
+        system administrator or the college office.
+        </p>
+
+        <div style="margin-top:12px;">
+        <label style="display:block; margin-bottom:5px; font-weight:600; font-size:17px; color:black;">
+        <input type="checkbox" name="accept_terms" required
+            style="transform:scale(1.3); margin-top:3px;">
+        &nbsp I have read and agree to the Terms & Conditions for editing student data. *
+        </label>
+        </div> <br>
+
+
+
+
         <div class="buttons">
             <button type="submit" name="btn" class="btn-submit" style="font-size:19px;">Update Record</button>
             <button type="button" class="btn-back" onclick="window.location='viewdel.php'"  style="font-size:19px; font-weight:600">

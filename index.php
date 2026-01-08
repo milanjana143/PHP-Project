@@ -301,6 +301,24 @@ text-align:center;
     font-size:18px;
 }
 
+
+.info-strip2{
+    background:#2d3142;
+    color:white;
+    text-align:center;
+    padding:18px;
+    font-size:18px;
+
+    width:80%;
+    margin:20px auto;     /* 🔥 centers the whole div */
+    border-radius:12px;  /* rounded corners */
+}
+
+
+
+
+
+
 /* ================= STATS ================= */
 .stats{
     display:flex;
@@ -623,7 +641,13 @@ text-align:center;
 
 
 
+<!-- INFO -->
+<div class="info-strip2">
+    Courses Offered • Courses Offered • Courses Offered
+</div>
 
+
+<br>
 
 
 <div class="cards-row">

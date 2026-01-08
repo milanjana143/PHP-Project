@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>College Portal | Student Management System</title>
-
+<title>TIMT Student DB</title>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 <style>
 /* ================= RESET ================= */
 *{

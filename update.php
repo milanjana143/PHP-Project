@@ -56,7 +56,8 @@ if (isset($_POST['btn'])) {
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Update Student</title>
+<title>TIMT Student DB</title>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
 <style>
 *{

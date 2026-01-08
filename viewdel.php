@@ -17,7 +17,8 @@ $total = mysqli_num_rows($sql);
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Edit / Delete Students | College Portal</title>
+<title>TIMT Student DB</title>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
 <style>
 /* ================= RESET ================= */

@@ -32,7 +32,8 @@ if (isset($_POST['btn'])) {
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Registration | Student Management System</title>
+<title>TIMT Student DB</title>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
 <style>
 /* ===== RESET ===== */

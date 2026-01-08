@@ -91,6 +91,46 @@ body::before{
     color:#203a43;
 }
 
+.nav-links{
+    display:flex;
+    align-items:center;
+}
+
+
+/* ================= NAVBAR RESPONSIVE ================= */
+
+    @media(max-width:768px){
+
+  .navbar{
+    padding:15px 20px;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .logo{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  /* 🔥 THIS WAS MISSING */
+  .nav-links{
+    width:100%;
+    display:grid;                         /* change layout */
+    grid-template-columns:repeat(2,1fr);  /* 2 buttons per row */
+    gap:10px;
+    margin-top:12px;
+  }
+
+  .nav-links a{
+    margin:0;
+    padding:10px 6px;
+    font-size:13px;
+    text-align:center;
+    white-space:normal;                  /* allow wrapping */
+  }
+}
+
+
 /* ================= CARD & TABLE ================= */
 .card{
     max-width:1250px;

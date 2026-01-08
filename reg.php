@@ -375,6 +375,300 @@ body::before{
             </div>
         </div>
 
+
+            <h2 style="font-size:18px; margin-bottom:10px; color:#333;">Personal Feedback</h2>
+            <!-- <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:15px;">
+                <div style="flex:1; min-width:200px;">
+                <label for="firstName" style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; box-sizing:border-box; font-size:14px;">
+                </div>
+                <div style="flex:1; min-width:200px;">
+                <label for="lastName" style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; box-sizing:border-box; font-size:14px;">
+                </div>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:15px;">
+                <div style="flex:1; min-width:200px;">
+                <label for="email" style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; box-sizing:border-box; font-size:14px;">
+                </div>
+                <div style="flex:1; min-width:200px;">
+                <label for="contact" style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Contact Number</label>
+                <input type="tel" id="contact" name="contact" placeholder="Enter your phone number" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; box-sizing:border-box; font-size:14px;">
+                </div>
+            </div> -->
+            
+
+            <!-- <h2 style="font-size:18px; margin-bottom:10px; color:#333;">Feedback Questions</h2> -->
+
+
+            <div style="margin-bottom:15px;">
+                <label for="referral" style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">How did you hear about our college?</label>
+                <select id="referral" name="referral" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; background-color:#f9f9f9; font-size:14px;">
+                <option value="" disabled selected>Select an option</option>
+                <option value="friend">Friend or Family</option>
+                <option value="friend">Teacher</option>
+                <option value="online">Online Search</option>
+                <option value="social">Social Media</option>
+                <option value="advertisement">Advertisement</option>
+                <option value="other">Other</option>
+                </select>
+            </div>
+            <div style="margin-bottom:15px;">
+                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Was the registration process easy to understand?</label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="reg" value="yes" required style="margin-right:5px; cursor:pointer;"> Yes
+                </label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="reg" value="no" style="margin-right:5px; cursor:pointer;"> No
+                </label>
+            </div>
+
+            <div style="margin-bottom:15px;">
+                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Did you get clear guidance during admission?</label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="guide" value="yes" required style="margin-right:5px; cursor:pointer;"> Yes
+                </label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="guide" value="no" style="margin-right:5px; cursor:pointer;"> No
+                </label>
+            </div>
+
+            <div style="margin-bottom:15px;">
+                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Were the staff members helpful?</label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="staff" value="yes" required style="margin-right:5px; cursor:pointer;"> Yes
+                </label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="staff" value="no" style="margin-right:5px; cursor:pointer;"> No
+                </label>
+            </div>
+
+            <div style="margin-bottom:15px;">
+                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Did you face any difficulty while submitting documents?</label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="diff" value="yes" required style="margin-right:5px; cursor:pointer;"> Yes
+                </label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="diff" value="no" style="margin-right:5px; cursor:pointer;"> No
+                </label>
+            </div>
+
+            <div style="margin-bottom:15px;">
+                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Was the admission procedure completed on time?</label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="addmission" value="yes" required style="margin-right:5px; cursor:pointer;"> Yes
+                </label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="addmission" value="no" style="margin-right:5px; cursor:pointer;"> No
+                </label>
+            </div>
+
+            <div style="margin-bottom:15px;">
+                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Do you like extra-curricular activities?</label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="curr" value="yes" required style="margin-right:5px; cursor:pointer;"> Yes
+                </label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="curr" value="no" style="margin-right:5px; cursor:pointer;"> No
+                </label>
+            </div>
+
+            <div style="margin-bottom:15px;">
+                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Do you have any physical disabilities?</label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="disab" value="yes" required style="margin-right:5px; cursor:pointer;"> Yes
+                </label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="disab" value="no" style="margin-right:5px; cursor:pointer;"> No
+                </label>
+            </div>
+
+            <div style="margin-bottom:15px;">
+                <label style="display:block; margin-bottom:5px; font-weight:bold; color:#555;">Do you have any financial crises?</label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="finance" value="yes" required style="margin-right:5px; cursor:pointer;"> Yes
+                </label>
+                <label style="display:inline-block; margin-right:20px; font-weight:normal; color:#555;">
+                <input type="radio" name="finance" value="no" style="margin-right:5px; cursor:pointer;"> No
+                </label>
+            </div>
+
+            <h2 style="font-size:18px; margin:18px 0 10px; color:#333;">Ratings</h2>
+
+            <!-- ONE ROW -->
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
+            <span style="font-weight:600; color:#555; min-width:180px;">Classroom Environment</span>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="class" value="Good" required> Average
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="class" value="Good" required> Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="class" value="Very Good"> Very Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="class" value="Excellent"> Excellent
+                </label>
+            </div>
+            </div>
+
+            <!-- ONE ROW -->
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
+            <span style="font-weight:600; color:#555; min-width:180px;">Teaching Quality</span>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="teach" value="Good" required> Average
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="teach" value="Good" required> Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="teach" value="Very Good"> Very Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="teach" value="Excellent"> Excellent
+                </label>
+            </div>
+            </div>
+
+            <!-- ONE ROW -->
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
+            <span style="font-weight:600; color:#555; min-width:180px;">Laboratory Facilities</span>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="lab" value="Good" required> Average
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="lab" value="Good" required> Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="lab" value="Very Good"> Very Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="lab" value="Excellent"> Excellent
+                </label>
+            </div>
+            </div>
+
+            <!-- ONE ROW -->
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
+            <span style="font-weight:600; color:#555; min-width:180px;">Library Resources</span>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="library" value="Good" required> Average
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="library" value="Good" required> Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="library" value="Very Good"> Very Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="library" value="Excellent"> Excellent
+                </label>
+            </div>
+            </div>
+
+            <!-- ONE ROW -->
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
+            <span style="font-weight:600; color:#555; min-width:180px;">Campus Infrastructure</span>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="campus" value="Good" required> Average
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="campus" value="Good" required> Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="campus" value="Very Good"> Very Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="campus" value="Excellent"> Excellent
+                </label>
+            </div>
+            </div>
+
+            <!-- ONE ROW -->
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
+            <span style="font-weight:600; color:#555; min-width:180px;">Availability of Study Materials</span>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="meterials" value="Good" required> Average
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="meterials" value="Good" required> Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="meterials" value="Very Good"> Very Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="meterials" value="Excellent"> Excellent
+                </label>
+            </div>
+            </div>
+
+            <!-- ONE ROW -->
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
+            <span style="font-weight:600; color:#555; min-width:180px;">Support from Teachers and Staff</span>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="support" value="Good" required> Average
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="support" value="Good" required> Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="support" value="Very Good"> Very Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="support" value="Excellent"> Excellent
+                </label>
+            </div>
+            </div>
+
+            <!-- ONE ROW -->
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
+            <span style="font-weight:600; color:#555; min-width:180px;">Cleanliness and Maintenance</span>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="clean" value="Good" required> Average
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="clean" value="Good" required> Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="clean" value="Very Good"> Very Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="clean" value="Excellent"> Excellent
+                </label>
+            </div>
+            </div>
+
+            <!-- ONE ROW -->
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:14px; flex-wrap:wrap;">
+            <span style="font-weight:600; color:#555; min-width:180px;">Overall Experience</span>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="overall" value="Good" required> Averagr
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="overall" value="Good" required> Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="overall" value="Very Good"> Very Good
+                </label>
+                <label style="padding:6px 14px; border:1px solid #ccc; border-radius:20px; cursor:pointer;">
+                <input type="radio" name="overall" value="Excellent"> Excellent
+                </label>
+            </div>
+            </div>
+
+
+
         <div class="buttons">
             <button type="submit" name="btn" class="btn-submit">Register Student</button>
             <button type="reset" class="btn-clear">Clear Form</button>

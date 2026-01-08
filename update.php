@@ -417,7 +417,7 @@ body::before{
 
         <div style="max-height:650px; overflow-y:auto; border:1px solid #ccc; padding:12px; border-radius:8px; background:#f9f9f9;">
 
-            <ul style="font-size:14px; color:#555; line-height:1.7; padding-left:20px; margin-bottom:15px;">
+            <ul style="font-size:15px; color:#555; line-height:1.7; padding-left:20px; margin-bottom:15px;">
             <li>All information entered or modified must be accurate, complete, and up to date.</li>
             <li>Providing false, misleading, or incomplete details may affect official student records.</li>
             <li>Proper authorization is required before editing, deleting, or accessing any student data.</li>

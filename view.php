@@ -287,7 +287,7 @@ body{
         <h1>Student Records</h1>
         <p style="font-size:17px;">Viewing all registered entries (Total: <strong><?php echo $total; ?></strong>)</p>
 
-        <input type="text" class="search-box" id="myInput" onkeyup="searchTable()"
+        <input type="text" class="search-box" id="myInput" onkeyup="searchTable()"   style="font-size:17px;"
             placeholder="🔍 Search by name, email, course, or college...">
 
         <?php if($total == 0){ ?>

@@ -691,8 +691,8 @@ body::before{
 
 
         <div class="buttons">
-            <button type="submit" name="btn" class="btn-submit">Register Student</button>
-            <button type="reset" class="btn-clear">Clear Form</button>
+            <button type="submit" name="btn" class="btn-submit"  style="font-size:19px;">Register Student</button>
+            <button type="reset" class="btn-clear"  style="font-size:19px; font-weight:600">Clear Form</button>
         </div>
 
     </form>

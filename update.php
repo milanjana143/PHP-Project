@@ -343,22 +343,22 @@ body::before{
 
         <!-- PERSONAL -->
         <div class="section">
-            <h3>Personal Information</h3>
+            <h3 style="font-size:25px; font-weight:650; color:#1f3c88;">Personal Information :</h3>
             <div class="grid-2">
                 <div class="field">
-                    <label>Name</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Name</label>
                     <input type="text" name="txtn" value="<?php echo $row['name']; ?>" required>
                 </div>
                 <div class="field">
-                    <label>Surname</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Surname</label>
                     <input type="text" name="txtsn" value="<?php echo $row['surname']; ?>" required>
                 </div>
                 <div class="field">
-                    <label>Email</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Email</label>
                     <input type="email" name="txte" value="<?php echo $row['email']; ?>" required>
                 </div>
                 <div class="field">
-                    <label>Contact</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Contact</label>
                     <input type="text" name="txtc" value="<?php echo $row['contact']; ?>">
                 </div>
             </div>
@@ -366,21 +366,21 @@ body::before{
 
         <!-- ACADEMIC -->
         <div class="section">
-            <h3>Academic Information</h3>
+            <h3 style="font-size:25px; font-weight:650; color:#1f3c88;">Academic Information :</h3>
             <div class="grid-2">
                 <div class="field">
-                    <label>College</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">College</label>
                     <input type="text" name="txtcn" value="<?php echo $row['college']; ?>">
                 </div>
 
                 <div class="field">
-                    <label>Qualification</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Qualification</label>
                     <input type="text" name="txtq" value="<?php echo $row['qualification']; ?>">
                     
                 </div>
                 
                 <div class="field">
-                    <label>Course</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Course</label>
                     <input type="text" name="txtco" value="<?php echo $row['course']; ?>">
                 </div>
             </div>
@@ -388,26 +388,26 @@ body::before{
 
         <!-- FEES -->
         <div class="section">
-            <h3>Fee Information</h3>
+            <h3 style="font-size:25px; font-weight:650; color:#1f3c88;">Fees Information :</h3>
             <div class="grid-3">
                 <div class="field">
-                    <label>Fees</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Fees</label>
                     <input type="number" name="txtf" value="<?php echo $row['fees']; ?>">
                 </div>
                 <div class="field">
-                    <label>Paid</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Paid</label>
                     <input type="number" name="txtp" value="<?php echo $row['paid']; ?>">
                 </div>
                 <div class="field">
-                    <label>Remaining</label>
+                    <label style="display:block; margin-bottom:5px; font-size:18px; font-weight:550; color:black;">Remaining</label>
                     <input type="number" name="txtr" value="<?php echo $row['remaining']; ?>" readonly>
                 </div>
             </div>
         </div>
 
         <div class="buttons">
-            <button type="submit" name="btn" class="btn-submit">Update Record</button>
-            <button type="button" class="btn-back" onclick="window.location='viewdel.php'">
+            <button type="submit" name="btn" class="btn-submit" style="font-size:19px;">Update Record</button>
+            <button type="button" class="btn-back" onclick="window.location='viewdel.php'"  style="font-size:19px; font-weight:600">
                 Cancel
             </button>
         </div>

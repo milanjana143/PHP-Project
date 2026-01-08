@@ -298,7 +298,7 @@ text-align:center;
     color:white;
     text-align:center;
     padding:18px;
-    font-size:18px;
+    font-size:24px;
 }
 
 
@@ -307,7 +307,7 @@ text-align:center;
     color:white;
     text-align:center;
     padding:18px;
-    font-size:18px;
+    font-size:24px;
 
     width:80%;
     margin:20px auto;     /* 🔥 centers the whole div */
@@ -694,17 +694,11 @@ text-align:center;
 
 
 
-
-
-
-
-
-
 <!-- FACULTY -->
 <!-- FACULTY SECTION -->
 <div class="faculty">
     <h2>Our Expert Faculty</h2>
-    <p>Learn from industry leaders and experienced educators</p>
+    <p><b><font size="5">Learn from industry leaders and experienced educators</font></b></p>
 
     <div class="faculty-slider-wrapper">
         <div class="faculty-slider">

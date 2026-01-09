@@ -6,3 +6,4 @@ include("connect.php");
 
 echo "DATABASE CONNECTED SUCCESSFULLY";
 ?>
+

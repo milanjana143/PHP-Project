@@ -39,3 +39,4 @@ if (mysqli_query($con, $sql)) {
     echo "Error creating table: " . mysqli_error($con);
 }
 ?>
+

@@ -1,3 +1,3 @@
-## 🚀 Portfolio Preview
-This is my personal portfolio web site showcasing my personal growth and skills through real-world web projects. It highlights my learning journey in programming languages, and modern web tools with a clean and simple design approach. To explore my portfolio, visit the link in the about section. <br><br>
+## 🚀 Project Preview
+This is a College Student Management Portal built using PHP and MySQL to manage academic records efficiently. It helps to organize student personal details, course information etc. To explore whole project, visit the link in the about section. <br><br>
 ![Project Demo](images/preview.gif)

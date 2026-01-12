@@ -697,93 +697,136 @@ text-align:center;
 <!-- FACULTY -->
 <!-- FACULTY SECTION -->
 <div class="faculty">
-    <h2>Our Expert Faculty</h2>
-    <p><b><font size="5">Learn from industry leaders and experienced educators</font></b></p>
+    <h2>Institution References</h2>
+    <p><b><font size="5">Complete overview of academical programmes and policies</font></b></p>
 
     <div class="faculty-slider-wrapper">
         <div class="faculty-slider">
 
             <!-- ===== ORIGINAL LIST ===== -->
+            <a href="images/TIMT_Prospectus.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
-                <img src="images/anathbandhu.jpeg">
-                <div class="info"><h4>Dr. Anathbandhu Patra</h4><span>Ph.D (IIT Kharagpur), MBA , DHRM, MA</span></div>
+            <img src="images/cover1.png">
+            <div class="info">
+            <h4>TIMT Prospectus</h4>
+            <span>The prospectus gives basic details about this college.</span>
             </div>
+            </div>
+            </a>
 
+            <a href="images/Academic_Holiday.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
-                <img src="images/manas.jpeg">
-                <div class="info"><h4>Manas Kumar Khatua</h4><span>M.Sc (Math)</span></div>
+            <img src="images/cover2.png">
+            <div class="info">
+            <h4>Academic Holiday</h4>
+            <span>The academic calendar list includes official holiday dates.</span>
             </div>
+            </div>
+            </a>
 
+            <a href="https://www.makautexam.net/new_syllabus.html" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
-                <img src="images/dhruba.jpeg">
-                <div class="info"><h4>Dhrubajoti Mondal</h4><span>M.Com, MBA (Finance)</span></div>
+            <img src="images/cover3.png">
+            <div class="info">
+            <h4>Course Syllabus</h4>
+            <span>The syllabus explains the course topics and structure.</span>
             </div>
+            </div>
+            </a>
 
+            <a href="TIMT_Fees_Structure.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
-                <img src="images/sandip.jpeg">
-                <div class="info"><h4>Sandip Sekhar Santra</h4><span>Ph.D, MBA</span></div>
+            <img src="images/cover4.png">
+            <div class="info">
+            <h4>Fees Structure</h4>
+            <span>The fees structure shows the total cost of all courses.</span>
             </div>
+            </div>
+            </a>
 
+            <a href="University_Exam_Schedule.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
-                <img src="images/srijib.jpeg">
-                <div class="info"><h4>Srijib Samanta</h4><span>Ph.D, MCA</span></div>
+            <img src="images/cover5.png">
+            <div class="info">
+            <h4>Exam Schedule</h4>
+            <span>The exam schedule shows important exams dates.</span>
             </div>
+            </div>
+            </a>
 
+            <a href="SVMCM_Guidelines.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
-                <img src="images/prasad.jpeg">
-                <div class="info"><h4>Prasad Manna</h4><span>M.Sc (Eco), MBA</span></div>
+            <img src="images/cover6.png">
+            <div class="info">
+            <h4>Scholarship Guidelines</h4>
+            <span>The guideline explains all about scholarship.</span>
             </div>
-
-            <div class="faculty-card">
-                <img src="images/santanu.jpeg">
-                <div class="info"><h4>Santanu Kumar Jana</h4><span>Ph.D, MCA</span></div>
             </div>
+            </a>
 
-            <div class="faculty-card">
-                <img src="images/suman.jpeg">
-                <div class="info"><h4>Suman Das</h4><span>MCA</span></div>
-            </div>
 
+            
             <!-- ===== DUPLICATE LIST (FOR SMOOTH LOOP) ===== -->
-            <div class="faculty-card">
-                <img src="images/anathbandhu.jpeg">
-                <div class="info"><h4>Dr. Anathbandhu Patra</h4><span>Ph.D (IIT Kharagpur), MBA , DHRM, MA</span></div>
-            </div>
 
+            <a href="images/TIMT_Prospectus.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
-                <img src="images/manas.jpeg">
-                <div class="info"><h4>Manas Kumar Khatua</h4><span>M.Sc (Math)</span></div>
+            <img src="images/cover1.png">
+            <div class="info">
+            <h4>TIMT Prospectus</h4>
+            <span>The prospectus gives basic details about this college.</span>
             </div>
+            </div>
+            </a>
 
+            <a href="images/Academic_Holiday.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
-                <img src="images/dhruba.jpeg">
-                <div class="info"><h4>Dhrubajoti Mondal</h4><span>M.Com, MBA (Finance)</span></div>
+            <img src="images/cover2.png">
+            <div class="info">
+            <h4>Academic Holiday</h4>
+            <span>The academic calendar list includes official holiday dates.</span>
             </div>
+            </div>
+            </a>
 
+            <a href="https://www.makautexam.net/new_syllabus.html" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
-                <img src="images/sandip.jpeg">
-                <div class="info"><h4>Sandip Sekhar Santra</h4><span>Ph.D, MBA</span></div>
+            <img src="images/cover3.png">
+            <div class="info">
+            <h4>Course Syllabus</h4>
+            <span>The syllabus explains the course topics and structure.</span>
             </div>
+            </div>
+            </a>
 
+            <a href="TIMT_Fees_Structure.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
-                <img src="images/srijib.jpeg">
-                <div class="info"><h4>Srijib Samanta</h4><span>Ph.D, MCA</span></div>
+            <img src="images/cover4.png">
+            <div class="info">
+            <h4>Fees Structure</h4>
+            <span>The fees structure shows the total cost of all courses.</span>
             </div>
+            </div>
+            </a>
 
+            <a href="University_Exam_Schedule.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
-                <img src="images/prasad.jpeg">
-                <div class="info"><h4>Prasad Manna</h4><span>M.Sc (Eco), MBA</span></div>
+            <img src="images/cover5.png">
+            <div class="info">
+            <h4>Exam Schedule</h4>
+            <span>The exam schedule shows important exams dates.</span>
             </div>
+            </div>
+            </a>
 
+            <a href="SVMCM_Guidelines.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
-                <img src="images/santanu.jpeg">
-                <div class="info"><h4>Santanu Kumar Jana</h4><span>Ph.D, MCA</span></div>
+            <img src="images/cover6.png">
+            <div class="info">
+            <h4>Scholarship Guidelines</h4>
+            <span>The guideline explains all about scholarship.</span>
             </div>
-
-            <div class="faculty-card">
-                <img src="images/suman.jpeg">
-                <div class="info"><h4>Suman Das</h4><span>MCA</span></div>
             </div>
+            </a>
 
         </div>
     </div>

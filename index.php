@@ -337,7 +337,7 @@ text-align:center;
 }
 
 .stat-box p{
-    color:#555;
+    color:black;
 }
 
 /* ================= FACULTY ================= */
@@ -734,7 +734,7 @@ text-align:center;
             </div>
             </a>
 
-            <a href="TIMT_Fees_Structure.pdf" target="_blank" style="text-decoration:none; color:inherit;">
+            <a href="images/TIMT_Fees_Structure.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
             <img src="images/cover4.png">
             <div class="info">
@@ -744,7 +744,7 @@ text-align:center;
             </div>
             </a>
 
-            <a href="University_Exam_Schedule.pdf" target="_blank" style="text-decoration:none; color:inherit;">
+            <a href="images/University_Exam_Schedule.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
             <img src="images/cover5.png">
             <div class="info">
@@ -754,7 +754,7 @@ text-align:center;
             </div>
             </a>
 
-            <a href="SVMCM_Guidelines.pdf" target="_blank" style="text-decoration:none; color:inherit;">
+            <a href="images/SVMCM_Guidelines.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
             <img src="images/cover6.png">
             <div class="info">
@@ -798,7 +798,7 @@ text-align:center;
             </div>
             </a>
 
-            <a href="TIMT_Fees_Structure.pdf" target="_blank" style="text-decoration:none; color:inherit;">
+            <a href="images/TIMT_Fees_Structure.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
             <img src="images/cover4.png">
             <div class="info">
@@ -808,7 +808,7 @@ text-align:center;
             </div>
             </a>
 
-            <a href="University_Exam_Schedule.pdf" target="_blank" style="text-decoration:none; color:inherit;">
+            <a href="images/University_Exam_Schedule.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
             <img src="images/cover5.png">
             <div class="info">
@@ -818,7 +818,7 @@ text-align:center;
             </div>
             </a>
 
-            <a href="SVMCM_Guidelines.pdf" target="_blank" style="text-decoration:none; color:inherit;">
+            <a href="images/SVMCM_Guidelines.pdf" target="_blank" style="text-decoration:none; color:inherit;">
             <div class="faculty-card">
             <img src="images/cover6.png">
             <div class="info">

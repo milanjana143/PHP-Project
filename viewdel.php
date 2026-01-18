@@ -372,7 +372,7 @@ body{
         <div><h3>TIMT</h3><p>Where education meets innovation.</p></div>
 
         <div>
-            <h3>Quick Links</h3>
+            <h3>Social Links</h3>
             <div style="margin-top:15px; display:flex; gap:14px;">
                 <a href="https://www.facebook.com/timttmluk" target="_blank"><img src="images/fb.png" style="width:28px;height:28px;border-radius:50%;"></a>
                 <a href="https://www.instagram.com/tamralipta_inst_of_man_nd_tech" target="_blank"><img src="images/insta.png" style="width:28px;height:28px;border-radius:50%;"></a>
@@ -384,7 +384,7 @@ body{
     </div>
 
     <div class="footer-bottom">
-        © 2025 College Portal || Developed by 
+        Copyright © 2025 timt.infinityfreeapp.com - All Rights Reserved || Developed by 
         <a href="https://milan-jana-portfolio.vercel.app/" target="_blank"
            style="color:#fff;background:#1f3c88;padding:6px 12px;border-radius:20px;text-decoration:none;font-weight:600;">
            Milan Jana

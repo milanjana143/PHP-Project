@@ -837,7 +837,7 @@ text-align:center;
 <div class="footer">
     <div class="footer-content">
         <div><h3>TIMT</h3><p>Where education meets innovation.</p></div>
-        <div><h3>Quick Links</h3>
+        <div><h3>Social Links</h3>
         
         <div style="margin-top:15px; display:flex; gap:14px;">
 
@@ -862,7 +862,7 @@ text-align:center;
         <div><h3>Contact</h3><p>Email: timt.institute@gmail.com</p><p>Phone: +91 8697511132</p></div>
     </div>
    <div class="footer-bottom">
-    © 2025 College Portal || Developed by 
+    Copyright © 2025 timt.infinityfreeapp.com - All Rights Reserved || Developed by 
     <a href="https://milan-jana-portfolio.vercel.app/" target="_blank"
        style="
        color:#ffffff;
